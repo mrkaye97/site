@@ -30,15 +30,32 @@ const nav = [
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preload" href={serifRoman} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={serifItalic} as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href={serifRoman}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href={serifItalic}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     <meta name="robots" content="noindex, nofollow" />
     {canonical && <link rel="canonical" href={canonical} />}
-    <link rel="alternate" type="application/rss+xml" title="sn-p.sh" href="/rss.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="sn-p.sh"
+      href="/rss.xml"
+    />
   </head>
   <body>
     <div class="wrap">
@@ -47,7 +64,10 @@ const nav = [
         <nav>
           {
             nav.map((item) => (
-              <a href={item.href} aria-current={here === item.href ? "page" : undefined}>
+              <a
+                href={item.href}
+                aria-current={here === item.href ? "page" : undefined}
+              >
                 {item.label}
               </a>
             ))

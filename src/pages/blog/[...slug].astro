@@ -1,15 +1,19 @@
 ---
 import { getCollection, render } from "astro:content";
 import Base from "../../layouts/Base.astro";
-import type { GetStaticPaths } from "astro";
+import type { CollectionEntry } from "astro:content";
 
-export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths = async () => {
   const posts = await getCollection("blog", ({ data }) => !data.hidden);
   return posts.map((post) => ({
     params: { slug: post.id },
     props: { post },
   }));
 };
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
 
 const { post } = Astro.props;
 const { Content } = await render(post);
@@ -75,10 +79,20 @@ const stamp = post.data.date.toLocaleDateString("en-US", {
     margin: 0 0 3rem;
   }
 
-  .prose { max-width: var(--measure); }
-  .prose :global(h2) { font-size: 1.5rem; margin: 2.75rem 0 0.75rem; }
-  .prose :global(h3) { font-size: 1.1875rem; margin: 2rem 0 0.5rem; }
-  .prose :global(p) { margin: 0 0 1.25rem; }
+  .prose {
+    max-width: var(--measure);
+  }
+  .prose :global(h2) {
+    font-size: 1.5rem;
+    margin: 2.75rem 0 0.75rem;
+  }
+  .prose :global(h3) {
+    font-size: 1.1875rem;
+    margin: 2rem 0 0.5rem;
+  }
+  .prose :global(p) {
+    margin: 0 0 1.25rem;
+  }
   .prose :global(img),
   .prose :global(video) {
     display: block;
@@ -87,7 +101,11 @@ const stamp = post.data.date.toLocaleDateString("en-US", {
     margin: 2rem 0;
     border-radius: 2px;
   }
-  .prose :global(hr) { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+  .prose :global(hr) {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 2.5rem 0;
+  }
 
   .back {
     max-width: var(--measure);

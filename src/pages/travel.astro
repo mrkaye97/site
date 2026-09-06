@@ -14,14 +14,19 @@ import photos from "../data/travel.json";
     {
       photos.map((photo) => (
         <figure tabindex="0">
-          <img
-            src={`/travel/${photo.filename}`}
-            width={photo.width}
-            height={photo.height}
-            loading="lazy"
-            decoding="async"
-            alt={photo.location}
-          />
+          <div
+            class="frame"
+            style={`aspect-ratio: ${photo.width} / ${photo.height}`}
+          >
+            <img
+              src={`/travel/${photo.filename}`}
+              width={photo.width}
+              height={photo.height}
+              loading="lazy"
+              decoding="async"
+              alt={photo.location}
+            />
+          </div>
           <figcaption>
             <strong>{photo.location}</strong>
             <span>{photo.date}</span>
@@ -70,12 +75,60 @@ import photos from "../data/travel.json";
     break-inside: avoid;
   }
 
+  /* The frame holds the photo's aspect ratio before the file arrives, so the
+     column flow never reflows, and it carries the shimmer in the meantime. */
+  .frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    background: var(--rule);
+  }
+
+  .frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      100deg,
+      transparent 20%,
+      rgb(255 255 255 / 28%) 50%,
+      transparent 80%
+    );
+    background-size: 220% 100%;
+    animation: shimmer 1.4s linear infinite;
+  }
+
+  .frame.is-loaded {
+    background: none;
+  }
+
+  .frame.is-loaded::after {
+    display: none;
+  }
+
+  @keyframes shimmer {
+    from {
+      background-position: 180% 0;
+    }
+    to {
+      background-position: -80% 0;
+    }
+  }
+
   img {
     display: block;
     width: 100%;
     height: auto;
     border-radius: 2px;
-    transition: transform 0.25s ease;
+    transition:
+      transform 0.25s ease,
+      opacity 0.4s ease;
+  }
+
+  /* Only hide the not-yet-loaded photo when there is script to reveal it
+     again; otherwise the gallery would stay blank. */
+  :global(html.js) .frame:not(.is-loaded) img {
+    opacity: 0;
   }
 
   figure:hover img,
@@ -144,4 +197,44 @@ import photos from "../data/travel.json";
       transform: none;
     }
   }
+
+  /* No shimmer sweep and no fade for anyone who has asked motion to stop; the
+     placeholder tint still marks a photo that has not arrived. */
+  @media (prefers-reduced-motion: reduce) {
+    .frame::after {
+      animation: none;
+    }
+    img {
+      transition: none;
+    }
+  }
+
+  :global(html:not(.js)) .frame::after {
+    display: none;
+  }
 </style>
+
+<script is:inline>
+  document.documentElement.classList.add("js");
+</script>
+
+<script>
+  for (const frame of document.querySelectorAll<HTMLElement>(
+    ".gallery .frame",
+  )) {
+    const img = frame.querySelector("img");
+    if (!img) continue;
+
+    // A cached image can already be done before this script runs, in which case
+    // no load event is ever fired.
+    if (img.complete && img.naturalWidth > 0) {
+      frame.classList.add("is-loaded");
+      continue;
+    }
+
+    const reveal = () => frame.classList.add("is-loaded");
+    img.addEventListener("load", reveal, { once: true });
+    // A broken file should not leave a shimmer running forever.
+    img.addEventListener("error", reveal, { once: true });
+  }
+</script>

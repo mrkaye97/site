@@ -5,9 +5,7 @@ const langOf = (node) =>
 
 const isWrapper = (node) =>
   node?.tagName === "div" &&
-  []
-    .concat(node.properties?.className ?? [])
-    .includes("code-block");
+  [].concat(node.properties?.className ?? []).includes("code-block");
 
 /**
  * Wraps each highlighted <pre> in a positioned div.
