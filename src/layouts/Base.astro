@@ -11,16 +11,12 @@ interface Props {
   description?: string;
   // Crossposts point at wherever they first appeared.
   canonical?: string;
-  // Slug of a card under /og. Posts pass their own; everything else shares one.
   ogImage?: string;
 }
 
 const { title, description, canonical, ogImage = "site" } = Astro.props;
-// Unfurls need absolute URLs, and Astro.site is the only place the origin is
-// configured.
 const pageUrl = new URL(Astro.url.pathname, Astro.site);
 const ogImageUrl = new URL(`/og/${ogImage}.png`, Astro.site);
-// og:site_name already carries the domain, so the suffix is noise in a preview.
 const shareTitle = title.replace(/\s*—\s*sn-p\.sh$/, "");
 // Trailing slashes vary by route, so compare without one.
 const here = Astro.url.pathname.replace(/\/+$/, "") || "/";
@@ -59,7 +55,6 @@ const nav = [
     <meta name="robots" content="noindex, nofollow" />
     {canonical && <link rel="canonical" href={canonical} />}
 
-    {/* Browser chrome follows the palette instead of defaulting to white. */}
     <meta
       name="theme-color"
       content="#eceee9"
@@ -71,7 +66,6 @@ const nav = [
       media="(prefers-color-scheme: dark)"
     />
 
-    {/* Link previews. The card is rendered at build time by /og/[slug].png. */}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="sn-p.sh" />
     <meta property="og:title" content={shareTitle} />
@@ -155,7 +149,6 @@ const nav = [
     text-decoration: underline;
   }
 
-  /* Off-screen until focused, so keyboard users can jump the nav. */
   .skip {
     position: absolute;
     left: -9999px;

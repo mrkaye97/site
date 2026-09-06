@@ -3,8 +3,6 @@ import { createRequire } from "node:module";
 import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
 
-// satori's font parser chokes on variable fonts, so the card uses the static
-// cuts of the same family the site renders in.
 const require = createRequire(import.meta.url);
 
 const face = (weight: 400 | 600) =>
@@ -14,7 +12,6 @@ const face = (weight: 400 | 600) =>
     ),
   );
 
-// Read once per build rather than per card.
 const fonts = Promise.all([face(400), face(600)]).then(
   ([regular, semibold]) =>
     [
@@ -23,8 +20,6 @@ const fonts = Promise.all([face(400), face(600)]).then(
     ] as const,
 );
 
-// The light palette from global.css. The card is a fixed image, so it can't
-// follow the reader's theme the way the site does.
 const PAPER = "#eceee9";
 const INK = "#1c383f";
 const INK_SOFT = "#55696d";
@@ -33,7 +28,6 @@ const ACCENT = "#4f6f2e";
 const WIDTH = 1200;
 const HEIGHT = 630;
 
-/** Long titles need to step down or they overflow the card. */
 function titleSize(title: string) {
   if (title.length > 78) return 52;
   if (title.length > 48) return 62;
@@ -43,7 +37,6 @@ function titleSize(title: string) {
 export interface CardOptions {
   title: string;
   description?: string;
-  /** Rendered under the rule, e.g. a post's date. */
   footnote?: string;
 }
 
@@ -108,7 +101,6 @@ export async function renderCard({
                       lineHeight: 1.4,
                       color: INK_SOFT,
                     },
-                    // Two lines of description is plenty at this size.
                     children:
                       description.length > 130
                         ? `${description.slice(0, 127).trimEnd()}…`

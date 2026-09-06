@@ -55,8 +55,6 @@ body {
   max-width: 72rem;
   margin-inline: auto;
   padding: 2rem 1.25rem 3rem;
-  /* A column so the footer sits at the bottom of short pages rather than
-     floating halfway up the viewport. */
   display: flex;
   flex-direction: column;
   min-height: 100dvh;

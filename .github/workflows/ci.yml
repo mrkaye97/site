@@ -32,7 +32,6 @@ jobs:
       - name: Lint
         run: pnpm lint
 
-      # Types plus Astro's own template/content diagnostics.
       - name: Check
         run: pnpm check
 

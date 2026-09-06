@@ -2,8 +2,6 @@ import type { APIRoute, GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 import { renderCard } from "../../lib/og";
 
-// One card per post, plus the fallback the rest of the site shares. Cards are
-// rendered at build time and emitted as plain PNGs.
 export const getStaticPaths = (async () => {
   const posts = await getCollection("blog", ({ data }) => !data.hidden);
 

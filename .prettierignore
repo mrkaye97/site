@@ -4,6 +4,4 @@ dist
 pnpm-lock.yaml
 public
 
-# Blog posts are prose. Leave the author's markdown as written rather than
-# rewriting emphasis markers and YAML quoting.
 src/content

@@ -3,8 +3,6 @@ import { Picture } from "astro:assets";
 import Base from "../layouts/Base.astro";
 import photos from "../data/travel.json";
 
-// Photos live in src/ so Astro can resize and re-encode them at build time;
-// the glob is how a filename in the JSON reaches the imported asset.
 const files = import.meta.glob<{ default: ImageMetadata }>(
   "../assets/travel/*.{jpg,jpeg}",
   { eager: true },
@@ -90,8 +88,6 @@ const gallery = photos.map((photo) => {
     break-inside: avoid;
   }
 
-  /* The frame holds the photo's aspect ratio before the file arrives, so the
-     column flow never reflows, and it carries the shimmer in the meantime. */
   .frame {
     position: relative;
     overflow: hidden;
@@ -130,8 +126,6 @@ const gallery = photos.map((photo) => {
     }
   }
 
-  /* <Picture> emits its own <picture><img>, which Astro's scoping does not
-     reach, so these are anchored to .frame and marked global. */
   .frame :global(picture) {
     display: block;
   }
@@ -146,8 +140,6 @@ const gallery = photos.map((photo) => {
       opacity 0.4s ease;
   }
 
-  /* Only hide the not-yet-loaded photo when there is script to reveal it
-     again; otherwise the gallery would stay blank. */
   :global(html.js) .frame:not(.is-loaded) :global(img) {
     opacity: 0;
   }
@@ -219,8 +211,6 @@ const gallery = photos.map((photo) => {
     }
   }
 
-  /* No shimmer sweep and no fade for anyone who has asked motion to stop; the
-     placeholder tint still marks a photo that has not arrived. */
   @media (prefers-reduced-motion: reduce) {
     .frame::after {
       animation: none;
@@ -246,8 +236,6 @@ const gallery = photos.map((photo) => {
     const img = frame.querySelector("img");
     if (!img) continue;
 
-    // A cached image can already be done before this script runs, in which case
-    // no load event is ever fired.
     if (img.complete && img.naturalWidth > 0) {
       frame.classList.add("is-loaded");
       continue;
@@ -255,7 +243,6 @@ const gallery = photos.map((photo) => {
 
     const reveal = () => frame.classList.add("is-loaded");
     img.addEventListener("load", reveal, { once: true });
-    // A broken file should not leave a shimmer running forever.
     img.addEventListener("error", reveal, { once: true });
   }
 </script>
