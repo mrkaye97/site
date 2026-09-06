@@ -1,6 +1,20 @@
 ---
+import { Picture } from "astro:assets";
 import Base from "../layouts/Base.astro";
 import photos from "../data/travel.json";
+
+// Photos live in src/ so Astro can resize and re-encode them at build time;
+// the glob is how a filename in the JSON reaches the imported asset.
+const files = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/travel/*.{jpg,jpeg}",
+  { eager: true },
+);
+
+const gallery = photos.map((photo) => {
+  const file = files[`../assets/travel/${photo.filename}`];
+  if (!file) throw new Error(`No such travel photo: ${photo.filename}`);
+  return { ...photo, image: file.default };
+});
 ---
 
 <Base title="Travel — sn-p.sh" description="Photographs, with where and when.">
@@ -12,16 +26,17 @@ import photos from "../data/travel.json";
 
   <div class="gallery">
     {
-      photos.map((photo) => (
+      gallery.map((photo) => (
         <figure tabindex="0">
           <div
             class="frame"
-            style={`aspect-ratio: ${photo.width} / ${photo.height}`}
+            style={`aspect-ratio: ${photo.image.width} / ${photo.image.height}`}
           >
-            <img
-              src={`/travel/${photo.filename}`}
-              width={photo.width}
-              height={photo.height}
+            <Picture
+              src={photo.image}
+              formats={["avif", "webp"]}
+              widths={[480, 800, 1200]}
+              sizes="(max-width: 40rem) 92vw, (max-width: 64rem) 46vw, 30vw"
               loading="lazy"
               decoding="async"
               alt={photo.location}
@@ -115,7 +130,13 @@ import photos from "../data/travel.json";
     }
   }
 
-  img {
+  /* <Picture> emits its own <picture><img>, which Astro's scoping does not
+     reach, so these are anchored to .frame and marked global. */
+  .frame :global(picture) {
+    display: block;
+  }
+
+  .frame :global(img) {
     display: block;
     width: 100%;
     height: auto;
@@ -127,12 +148,12 @@ import photos from "../data/travel.json";
 
   /* Only hide the not-yet-loaded photo when there is script to reveal it
      again; otherwise the gallery would stay blank. */
-  :global(html.js) .frame:not(.is-loaded) img {
+  :global(html.js) .frame:not(.is-loaded) :global(img) {
     opacity: 0;
   }
 
-  figure:hover img,
-  figure:focus-visible img {
+  figure:hover .frame :global(img),
+  figure:focus-visible .frame :global(img) {
     transform: scale(0.97);
   }
 
@@ -192,8 +213,8 @@ import photos from "../data/travel.json";
     figcaption span {
       display: block;
     }
-    figure:hover img,
-    figure:focus-visible img {
+    figure:hover .frame :global(img),
+    figure:focus-visible .frame :global(img) {
       transform: none;
     }
   }
@@ -204,7 +225,7 @@ import photos from "../data/travel.json";
     .frame::after {
       animation: none;
     }
-    img {
+    .frame :global(img) {
       transition: none;
     }
   }

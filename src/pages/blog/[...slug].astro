@@ -30,6 +30,7 @@ const stamp = post.data.date.toLocaleDateString("en-US", {
   title={`${post.data.title} — sn-p.sh`}
   description={post.data.description}
   canonical={post.data.original}
+  ogImage={post.id}
 >
   <article>
     <h1>{post.data.title}</h1>

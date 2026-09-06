@@ -9,15 +9,16 @@ import Base from "../layouts/Base.astro";
   <p class="statement">Hi :)</p>
 
   <div class="body">
-    This site is my space to shout thoughts into the void, for the most part.
-    Writing helps me think through things; I find it meditative, especially
-    nowadays when I find myself doing less and less work "unassisted." All the
-    writing here is my own.
-  </div>
-  <div style="height: 1rem;"></div>
-  <div class="body">
-    The site's name is a play on a "snapshot," whether of my life, my views at
-    the time, places I've been, or similar.
+    <p>
+      This site is my space to shout thoughts into the void, for the most part.
+      Writing helps me think through things, and I find it meditative,
+      especially nowadays when I find myself doing less and less work
+      "unassisted." All the writing here is my own.
+    </p>
+    <p>
+      The site's name is a play on a "snapshot," whether of my life, my views at
+      the time, places I've been, or similar.
+    </p>
   </div>
 </Base>
 
@@ -35,7 +36,11 @@ import Base from "../layouts/Base.astro";
   }
 
   .body p {
-    margin: 0 0 1.25rem;
+    margin: 0 0 1rem;
     color: var(--ink-soft);
+  }
+
+  .body p:last-child {
+    margin-bottom: 0;
   }
 </style>

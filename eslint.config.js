@@ -20,5 +20,10 @@ export default defineConfig(
     // The islands of client-side script in .astro files.
     files: ["**/*.astro"],
     languageOptions: { globals: globals.browser },
+    rules: {
+      // Astro's ambient types (ImageMetadata and friends) are invisible to
+      // eslint's scope analysis; `astro check` is what type-checks these.
+      "no-undef": "off",
+    },
   },
 );

@@ -11,9 +11,17 @@ interface Props {
   description?: string;
   // Crossposts point at wherever they first appeared.
   canonical?: string;
+  // Slug of a card under /og. Posts pass their own; everything else shares one.
+  ogImage?: string;
 }
 
-const { title, description, canonical } = Astro.props;
+const { title, description, canonical, ogImage = "site" } = Astro.props;
+// Unfurls need absolute URLs, and Astro.site is the only place the origin is
+// configured.
+const pageUrl = new URL(Astro.url.pathname, Astro.site);
+const ogImageUrl = new URL(`/og/${ogImage}.png`, Astro.site);
+// og:site_name already carries the domain, so the suffix is noise in a preview.
+const shareTitle = title.replace(/\s*—\s*sn-p\.sh$/, "");
 // Trailing slashes vary by route, so compare without one.
 const here = Astro.url.pathname.replace(/\/+$/, "") || "/";
 const nav = [
@@ -50,6 +58,33 @@ const nav = [
     {description && <meta name="description" content={description} />}
     <meta name="robots" content="noindex, nofollow" />
     {canonical && <link rel="canonical" href={canonical} />}
+
+    {/* Browser chrome follows the palette instead of defaulting to white. */}
+    <meta
+      name="theme-color"
+      content="#eceee9"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#14282c"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    {/* Link previews. The card is rendered at build time by /og/[slug].png. */}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="sn-p.sh" />
+    <meta property="og:title" content={shareTitle} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={pageUrl.href} />
+    <meta property="og:image" content={ogImageUrl.href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={shareTitle} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={shareTitle} />
+    {description && <meta name="twitter:description" content={description} />}
+    <meta name="twitter:image" content={ogImageUrl.href} />
     <link
       rel="alternate"
       type="application/rss+xml"
@@ -58,6 +93,7 @@ const nav = [
     />
   </head>
   <body>
+    <a class="skip" href="#content">Skip to content</a>
     <div class="wrap">
       <header>
         <a class="mark" href="/">sn-p.sh</a>
@@ -74,7 +110,13 @@ const nav = [
           }
         </nav>
       </header>
-      <main><slot /></main>
+      <main id="content"><slot /></main>
+      <footer>
+        <nav aria-label="Elsewhere">
+          <a href="mailto:hi@sn-p.sh">Email</a>
+          <a href="/rss.xml">RSS</a>
+        </nav>
+      </footer>
     </div>
   </body>
 </html>
@@ -107,8 +149,50 @@ const nav = [
     text-decoration: none;
   }
 
-  nav a:hover,
-  nav a[aria-current="page"] {
+  header nav a:hover,
+  header nav a[aria-current="page"] {
+    color: var(--ink);
+    text-decoration: underline;
+  }
+
+  /* Off-screen until focused, so keyboard users can jump the nav. */
+  .skip {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    padding: 0.6rem 1rem;
+    background: var(--paper);
+    color: var(--ink);
+  }
+
+  .skip:focus {
+    left: 0;
+    z-index: 10;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    margin-top: 6rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+  }
+
+  footer p {
+    margin: 0;
+  }
+
+  footer nav {
+    gap: 1.25rem;
+    font-size: inherit;
+  }
+
+  footer nav a:hover {
     color: var(--ink);
     text-decoration: underline;
   }
