@@ -1,0 +1,366 @@
+[
+  {
+    "filename": "alta.jpg",
+    "location": "East Castle, Alta, Utah",
+    "date": "February 2022",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "filename": "blomqvist.jpg",
+    "location": "Mikael Blomqvist's House, Stockholm, Sweden",
+    "date": "September, 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "brooklyn-bridge-park-covid.jpg",
+    "location": "Brooklyn Bridge Park, New York City",
+    "date": "June 2020",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "carleton.jpg",
+    "location": "Northfield, Minnesota",
+    "date": "June 2025",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "cartagena.jpg",
+    "location": "Cartagena, Colombia",
+    "date": "March 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "chania.jpg",
+    "location": "Chania, Crete, Greece",
+    "date": "October 2024",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "christiania.jpg",
+    "location": "Freetown Christiania, Copenhagen, Denmark",
+    "date": "September 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "copenhagen-bikes.jpg",
+    "location": "Copenhagen, Denmark",
+    "date": "September 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "costa-rica-selva.jpg",
+    "location": "Arenal Volcano National Park, Costa Rica",
+    "date": "December 2022",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "costa-rica-waterfall.jpg",
+    "location": "Nicoya, Costa Rica",
+    "date": "December 2022",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "cows.jpg",
+    "location": "Roys Peak, Wanaka, New Zealand",
+    "date": "April 2024",
+    "width": 1600,
+    "height": 1199
+  },
+  {
+    "filename": "cuba.jpg",
+    "location": "Havana, Cuba",
+    "date": "December 2017",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "denali-flowers.jpg",
+    "location": "Denali National Park, Alaska",
+    "date": "July 2023",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "denali-mud.jpg",
+    "location": "Denali National Park, Alaska",
+    "date": "July 2023",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "dubrovnik-2.jpeg",
+    "location": "Dubrovnik, Croatia",
+    "date": "December 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "dubrovnik.jpg",
+    "location": "Dubrovnik, Croatia",
+    "date": "December 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "dumbo-covid.jpg",
+    "location": "Dumbo, Brooklyn, New York City",
+    "date": "June 2020",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "filename": "fishermans-bastion.jpg",
+    "location": "Fisherman's Bastion, Budapest, Hungary",
+    "date": "December 2017",
+    "width": 1600,
+    "height": 900
+  },
+  {
+    "filename": "galapagos.jpg",
+    "location": "Galapagos Islands, Ecuador",
+    "date": "December 2015",
+    "width": 1600,
+    "height": 1119
+  },
+  {
+    "filename": "gamla-stan.jpeg",
+    "location": "Gamla Stan, Stockholm, Sweden",
+    "date": "September 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "gertrude-saddle.jpg",
+    "location": "Gertrude Saddle, Fiordland National Park, New Zealand",
+    "date": "April 2024",
+    "width": 1600,
+    "height": 1199
+  },
+  {
+    "filename": "guell-1.jpg",
+    "location": "Park G\u00fcell, Barcelona, Spain",
+    "date": "October 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "guell-sunrise.jpg",
+    "location": "Parc G\u00fcell, Barcelona, Spain",
+    "date": "October 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "guggenheim.jpeg",
+    "location": "Guggenheim Museum, Bilbao, Spain",
+    "date": "October 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "hobbiton.jpg",
+    "location": "Bag End, Hobbiton, The Shire, Middle-earth",
+    "date": "April 2024",
+    "width": 1600,
+    "height": 1199
+  },
+  {
+    "filename": "hungarian-parliament.jpg",
+    "location": "Hungarian Parliament, Budapest, Hungary",
+    "date": "December 2017",
+    "width": 1600,
+    "height": 777
+  },
+  {
+    "filename": "leiden.jpeg",
+    "location": "Leiden, Netherlands",
+    "date": "November 2024",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "nyhavn.jpg",
+    "location": "Nyhavn, Copenhagen, Denmark",
+    "date": "September 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "opera-house.jpg",
+    "location": "Sydney Opera House, Sydney, Australia",
+    "date": "May 2024",
+    "width": 1600,
+    "height": 1199
+  },
+  {
+    "filename": "parthenon.jpg",
+    "location": "Athens, Greece",
+    "date": "October 2024",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "plitvice.jpg",
+    "location": "Plitvice Lakes National Park, Croatia",
+    "date": "December 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "pompeii.jpeg",
+    "location": "Pompeii, Italy",
+    "date": "December 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "positano.jpg",
+    "location": "Positano, Italy",
+    "date": "December 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "riga.jpeg",
+    "location": "Riga, Latvia",
+    "date": "October 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "rural-croatia.jpg",
+    "location": "Dre\u017enik Grad, Croatia",
+    "date": "December 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "salzburg.jpg",
+    "location": "Salzburg, Austria",
+    "date": "December 2017",
+    "width": 1600,
+    "height": 899
+  },
+  {
+    "filename": "sarajevo-bobsled.jpg",
+    "location": "Olympic Boblsed Track, Sarajevo, Bosnia",
+    "date": "December 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "sol-32.jpg",
+    "location": "Sollerov\u00e4gen, Stockholm, Sweden",
+    "date": "November 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "split.jpg",
+    "location": "Split, Croatia",
+    "date": "December 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "st-andrews.jpeg",
+    "location": "St. Andrews, Scotland",
+    "date": "October 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "arbeit-macht-frei.jpg",
+    "location": "O\u015bwi\u0119cim, Poland",
+    "date": "December 2017",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "sthlm.jpg",
+    "location": "Stadshuset, Kungsholmen, Stockholm, Sweden",
+    "date": "September 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "tallinn.jpg",
+    "location": "Tallinn, Estonia",
+    "date": "October 2019",
+    "width": 1600,
+    "height": 1075
+  },
+  {
+    "filename": "times-square-covid.jpg",
+    "location": "Times Square, New York City",
+    "date": "June 2020",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "tivoli.jpeg",
+    "location": "Tivoli, Copenhagen, Denmark",
+    "date": "September 2019",
+    "width": 1600,
+    "height": 1201
+  },
+  {
+    "filename": "vines.jpg",
+    "location": "Queenstown, New Zealand",
+    "date": "April 2024",
+    "width": 1600,
+    "height": 1199
+  },
+  {
+    "filename": "visby.jpeg",
+    "location": "Visby, Gotland, Sweden",
+    "date": "October 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "xander.jpg",
+    "location": "Positano, Italy",
+    "date": "December 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "zagreb.jpg",
+    "location": "Zagreb, Croatia",
+    "date": "December 2019",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "antelope.jpg",
+    "location": "Antelope Canyon, Arizona",
+    "date": "October 2025",
+    "width": 1200,
+    "height": 1600
+  },
+  {
+    "filename": "red-rock.jpg",
+    "location": "Red Rock Canyon, Nevada",
+    "date": "March 2026",
+    "width": 1600,
+    "height": 1200
+  },
+  {
+    "filename": "bozeman.jpg",
+    "location": "Bozeman, Montana",
+    "date": "August 2026",
+    "width": 1600,
+    "height": 1200
+  }
+]

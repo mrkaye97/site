@@ -1,0 +1,106 @@
+---
+import Base from "../layouts/Base.astro";
+
+const projects = [
+  {
+    name: "Medici",
+    href: "https://medici.sn-p.sh",
+    blurb: "A dead-simple, Splitwise-like expense splitting app.",
+  },
+  {
+    name: "Artemis",
+    href: "https://artemis.sn-p.sh",
+    blurb: "A minimalist tool for passively (or actively!) job searching.",
+  },
+  {
+    name: "Recipebox",
+    href: "https://recipebox.sn-p.sh",
+    blurb: "A virtual box of index cards of the recipes you love.",
+  },
+  {
+    name: "Call Your Loved Ones",
+    href: "https://cylo.sn-p.sh",
+    blurb:
+      "A small app for keeping track of when you last called your friends and family.",
+  },
+  {
+    name: "Hatchet",
+    href: "https://hatchet.run",
+    blurb:
+      "My day job: An orchestration engine for background tasks, AI agents, and durable workflows.",
+  },
+  {
+    name: "Advent of Code Solutions",
+    href: "https://github.com/mrkaye97/advent-of-code",
+    blurb: "Mostly in Elixir, Gleam coming soon!",
+  },
+];
+---
+
+<Base
+  title="Projects — sn-p.sh"
+  description="Small self-hosted tools, running on the same machine as this site."
+>
+  <h1>Projects</h1>
+
+  <p class="lead">
+    I spend a lot of my time writing software, whether for work or for fun. I
+    love working on small, self-contained tools that solve a specific problem
+    that I have and that I can host myself. I also like contributing to
+    open-source, working on Advent of Code problems, and so on.
+  </p>
+
+  <ul>
+    {
+      projects.map((project) => (
+        <li>
+          <a href={project.href} rel="noopener">
+            {project.name}
+          </a>
+          <p>{project.blurb}</p>
+        </li>
+      ))
+    }
+  </ul>
+</Base>
+
+<style>
+  h1 {
+    font-size: clamp(1.875rem, 5vw, 2.5rem);
+    margin: 0 0 1.25rem;
+  }
+
+  .lead {
+    margin: 0 0 3.5rem;
+    max-width: 46ch;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.75rem;
+  }
+
+  li a {
+    font-size: 1.3125rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    line-height: 1.25;
+  }
+
+  li a:hover {
+    color: var(--accent);
+  }
+
+  li p {
+    margin: 0.3rem 0 0;
+    font-style: italic;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+</style>

@@ -1,0 +1,479 @@
+[
+  {
+    "title": "Authors",
+    "items": [
+      {
+        "name": "Cal Newport",
+        "link": "https://app.thestorygraph.com/authors/0968e7ef-339e-4fbf-8ed3-03bbd52a63bb?page=4"
+      },
+      {
+        "name": "Khaled Hosseini",
+        "link": "https://app.thestorygraph.com/authors/4f3848b7-15fd-41e8-9b11-782db69ddb04"
+      },
+      {
+        "name": "Sally Rooney",
+        "link": "https://app.thestorygraph.com/authors/c376f2e1-78fc-44a2-b0d8-e6430a056b7e"
+      }
+    ]
+  },
+  {
+    "title": "Beers",
+    "items": [
+      {
+        "name": "Heady Topper",
+        "link": "https://untappd.com/b/the-alchemist-heady-topper/4691"
+      },
+      {
+        "name": "King Sue",
+        "link": "https://untappd.com/b/toppling-goliath-brewing-co-king-sue/594015"
+      },
+      {
+        "name": "Very Green",
+        "link": "https://untappd.com/b/tree-house-brewing-company-very-green/689944"
+      }
+    ]
+  },
+  {
+    "title": "Books (Fiction)",
+    "items": [
+      {
+        "name": "The Kite Runner",
+        "link": "https://app.thestorygraph.com/books/6c6726eb-8580-4be7-ab60-5ccd073d7ae5"
+      },
+      {
+        "name": "Beautiful World, Where Are You",
+        "link": "https://app.thestorygraph.com/books/e98c9548-b5dc-4a34-94f4-410e400d690b"
+      },
+      {
+        "name": "A Storm of Swords",
+        "link": "https://app.thestorygraph.com/books/ff263f0f-121e-41d2-b2ba-b261fc974cc3"
+      }
+    ]
+  },
+  {
+    "title": "Books (Non-Fiction)",
+    "items": [
+      {
+        "name": "Algorithms to Live By",
+        "link": "https://app.thestorygraph.com/books/b5d084fb-6417-4803-8a47-da827d3d7270"
+      },
+      {
+        "name": "The Signal and the Noise",
+        "link": "https://app.thestorygraph.com/books/b771dbda-1528-4886-8814-b530b3a07431"
+      },
+      {
+        "name": "Factfulness",
+        "link": "https://app.thestorygraph.com/books/dedebd43-d2f7-4f9e-8ee3-b73671df1311"
+      }
+    ]
+  },
+  {
+    "title": "Charitable Organizations",
+    "items": [
+      {
+        "name": "The Equal Justice Initiative",
+        "link": "https://eji.org"
+      },
+      {
+        "name": "International Refugee Assistance Project",
+        "link": "https://refugeerights.org"
+      },
+      {
+        "name": "World Central Kitchen",
+        "link": "https://wck.org"
+      }
+    ]
+  },
+  {
+    "title": "Condiments",
+    "items": [
+      {
+        "name": "Calabrian Chiles",
+        "link": "https://www.seriouseats.com/the-condiments-we-put-on-everything"
+      },
+      {
+        "name": "Kewpie Mayonnaise",
+        "link": "https://www.kewpieshop.com/products/kewpie-mayonnaise"
+      },
+      {
+        "name": "Preserved Lemons",
+        "link": "https://www.seriouseats.com/how-to-make-preserved-lemons"
+      }
+    ]
+  },
+  {
+    "title": "Data Structures",
+    "items": [
+      {
+        "name": "Graph",
+        "link": "https://en.wikipedia.org/wiki/Graph_(abstract_data_type)"
+      },
+      {
+        "name": "Skip List",
+        "link": "https://en.wikipedia.org/wiki/Skip_list"
+      },
+      {
+        "name": "B-Tree",
+        "link": "https://en.wikipedia.org/wiki/B-tree"
+      }
+    ]
+  },
+  {
+    "title": "Fictional Characters",
+    "items": [
+      {
+        "name": "Elaine Benes",
+        "link": "https://en.wikipedia.org/wiki/Elaine_Benes"
+      },
+      {
+        "name": "Oberyn Martell",
+        "link": "https://awoiaf.westeros.org/index.php/Oberyn_Martell"
+      },
+      {
+        "name": "Samwise Gamgee",
+        "link": "https://lotr.fandom.com/wiki/Samwise_Gamgee"
+      }
+    ]
+  },
+  {
+    "title": "Foods",
+    "custom_sort": true,
+    "items": [
+      {
+        "name": "Bananas",
+        "link": "https://en.wikipedia.org/wiki/Banana"
+      },
+      {
+        "name": "European- (preferably Bulgarian-) Style Yogurt",
+        "link": "https://bacillusbulgaricus.com/bulgarian-yogurt/"
+      },
+      {
+        "name": "Bananas (did I mention that?)",
+        "link": "https://en.wikipedia.org/wiki/Banana"
+      }
+    ]
+  },
+  {
+    "title": "Kitchen Utensils",
+    "items": [
+      {
+        "name": "Wooden Spoon",
+        "link": "https://madeincookware.com/products/the-wooden-spoon/utensil"
+      },
+      {
+        "name": "Tongs",
+        "link": "https://www.oxo.com/12-tongs-619.html"
+      },
+      {
+        "name": "Meat Thermometer",
+        "link": "https://www.thermoworks.com/products/thermapen-one"
+      }
+    ]
+  },
+  {
+    "title": "Movies",
+    "items": [
+      {
+        "name": "Birdman",
+        "link": "https://www.rottentomatoes.com/m/birdman_2014"
+      },
+      {
+        "name": "Inside Out",
+        "link": "https://www.rottentomatoes.com/m/inside_out_2015"
+      },
+      {
+        "name": "Moonrise Kingdom",
+        "link": "https://www.rottentomatoes.com/m/moonrise_kingdom"
+      }
+    ]
+  },
+  {
+    "title": "National Parks",
+    "items": [
+      {
+        "name": "Acadia",
+        "link": "https://www.nps.gov/acad/index.htm"
+      },
+      {
+        "name": "Bryce Canyon",
+        "link": "https://www.nps.gov/brca/index.htm"
+      },
+      {
+        "name": "Grand Teton",
+        "link": "https://www.nps.gov/grte/index.htm"
+      }
+    ]
+  },
+  {
+    "title": "Paradigms",
+    "items": [
+      {
+        "name": "Bayesian",
+        "link": "https://en.wikipedia.org/wiki/Bayesian_statistics"
+      },
+      {
+        "name": "Behavioral",
+        "link": "https://en.wikipedia.org/wiki/Behavioral_economics"
+      },
+      {
+        "name": "Functional",
+        "link": "https://en.wikipedia.org/wiki/Functional_programming"
+      }
+    ]
+  },
+  {
+    "title": "Pieces of Cookware",
+    "items": [
+      {
+        "name": "3-Quart Saute Pan",
+        "link": "https://www.all-clad.com/copper-core-5-ply-bonded-cookware-saute-pan-with-lid-3-quart.html"
+      },
+      {
+        "name": "5.5 Quart Dutch Oven",
+        "link": "https://www.lecreuset.com/round-dutch-oven/21177US.html"
+      },
+      {
+        "name": "Rice Cooker",
+        "link": "https://us.tatung.com/Product/1-Tatung%20Multi-Functional%20Cooker"
+      }
+    ]
+  },
+  {
+    "title": "Kenji Recipes",
+    "items": [
+      {
+        "name": "Miso Salmon",
+        "link": "https://www.seriouseats.com/miso-glazed-salmon-in-the-toaster-oven-recipe"
+      },
+      {
+        "name": "Red Beans and Rice",
+        "link": "https://www.seriouseats.com/new-orleans-style-red-beans-rice-recipe"
+      },
+      {
+        "name": "Pozole Verde with Chicken",
+        "link": "https://www.seriouseats.com/recipes/2017/01/pozole-verde-de-pollo-green-mexican-hominy-and-chicken-soup-recipe.html"
+      }
+    ]
+  },
+  {
+    "title": "Ski Runs",
+    "items": [
+      {
+        "name": "High Boy (Alf's High Rustler)",
+        "link": "https://www.alta.com/"
+      },
+      {
+        "name": "Three Forks",
+        "link": "https://bigskyresort.com/"
+      },
+      {
+        "name": "Daly Bowl",
+        "link": "https://www.deervalley.com/blog/deer-valley-winter-trail-map"
+      }
+    ]
+  },
+  {
+    "title": "Spirits",
+    "items": [
+      {
+        "name": "Fernet",
+        "link": "https://us.fernetbranca.com/"
+      },
+      {
+        "name": "Islay Scotch",
+        "link": "https://www.malts.com/en-us/distilleries/lagavulin"
+      },
+      {
+        "name": "Mezcal",
+        "link": "https://mezcaloteca.com/en"
+      }
+    ]
+  },
+  {
+    "title": "Subreddits",
+    "items": [
+      {
+        "name": "ExperiencedDevs",
+        "link": "https://www.reddit.com/r/ExperiencedDevs"
+      },
+      {
+        "name": "MaleLivingSpace",
+        "link": "https://www.reddit.com/r/MaleLivingSpace"
+      },
+      {
+        "name": "FuckCars",
+        "link": "https://www.reddit.com/r/FuckCars"
+      }
+    ]
+  },
+  {
+    "title": "Hikes",
+    "items": [
+      {
+        "name": "Six Summits",
+        "link": "https://www.alltrails.com/trail/us/maine/six-summit-trail"
+      },
+      {
+        "name": "Gertrude Saddle",
+        "link": "https://www.alltrails.com/trail/new-zealand/southland/gertrude-saddle-route"
+      },
+      {
+        "name": "Grand Canyon, Rim to River",
+        "link": "https://www.alltrails.com/trail/us/arizona/south-kaibab-phantom-ranch-and-bright-angel-trail-loop"
+      }
+    ]
+  },
+  {
+    "title": "Moments in Baseball History",
+    "items": [
+      {
+        "name": "The Catch",
+        "link": "https://www.youtube.com/watch?v=7bLt2xKaNH0&ab_channel=MLBVault"
+      },
+      {
+        "name": "Torii Hunter 2002 All Star Game Catch",
+        "link": "https://www.youtube.com/watch?v=dcQ5De9ZcZc&ab_channel=MLB"
+      },
+      {
+        "name": "Kirk Gibson's Walk-Off Home Run",
+        "link": "https://www.youtube.com/watch?v=N4nwMDZYXTI"
+      }
+    ]
+  },
+  {
+    "title": "Wine Grapes",
+    "items": [
+      {
+        "name": "Tempranillo",
+        "link": "https://en.wikipedia.org/wiki/Tempranillo"
+      },
+      {
+        "name": "Sangiovese",
+        "link": "https://en.wikipedia.org/wiki/Sangiovese"
+      },
+      {
+        "name": "Syrah",
+        "link": "https://en.wikipedia.org/wiki/Syrah"
+      }
+    ]
+  },
+  {
+    "title": "Camberville Restaurants",
+    "items": [
+      {
+        "name": "Oleana",
+        "link": "https://www.oleanarestaurant.com/"
+      },
+      {
+        "name": "Urban Hearth",
+        "link": "https://www.urbanhearth.net/"
+      },
+      {
+        "name": "Moëca",
+        "link": "https://www.moecarestaurant.com/"
+      }
+    ]
+  },
+  {
+    "title": "Sandwiches",
+    "items": [
+      {
+        "name": "Cutty's Fried Chicken Sandwich on Super Cluckin' Sunday",
+        "link": "https://www.cuttyfoods.com/super-cluckin-sunday/"
+      },
+      {
+        "name": "Carnegie Deli Corned Beef",
+        "link": "https://en.wikipedia.org/wiki/Carnegie_Deli"
+      },
+      {
+        "name": "Monica's Caprese with Prosciutto",
+        "link": "https://www.monicasnorthend.com/"
+      }
+    ]
+  },
+  {
+    "title": "Postgres Features",
+    "items": [
+      {
+        "name": "Exclusion Constraints",
+        "link": "https://www.postgresql.org/docs/current/ddl-constraints.html#DDL-CONSTRAINTS-EXCLUSION"
+      },
+      {
+        "name": "Custom (Especially Range) Types",
+        "link": "https://www.postgresql.org/docs/current/sql-createtype.html"
+      },
+      {
+        "name": "Recursive CTEs",
+        "link": "https://www.postgresql.org/docs/current/queries-with.html#QUERIES-WITH-RECURSIVE"
+      }
+    ]
+  },
+  {
+    "title": "Software Applications",
+    "items": [
+      {
+        "name": "Obsidian",
+        "link": "https://obsidian.md/"
+      },
+      {
+        "name": "Alfred",
+        "link": "https://www.alfredapp.com/"
+      },
+      {
+        "name": "Pi-hole",
+        "link": "https://pi-hole.net/"
+      }
+    ]
+  },
+  {
+    "title": "Camberville Squares",
+    "items": [
+      {
+        "name": "Inman",
+        "link": "https://en.wikipedia.org/wiki/Inman_Square"
+      },
+      {
+        "name": "Union",
+        "link": "https://en.wikipedia.org/wiki/Union_Square_(Somerville)"
+      },
+      {
+        "name": "Central",
+        "link": "https://en.wikipedia.org/wiki/Central_Square,_Cambridge"
+      }
+    ]
+  },
+  {
+    "title": "Annual Metro Boston Events",
+    "items": [
+      {
+        "name": "Midnight Marathon Bike Ride",
+        "link": "https://www.facebook.com/midnightmarathonbikeride/"
+      },
+      {
+        "name": "Cambridge Dance Party",
+        "link": "https://cambridgeusa.org/event/cambridge-city-dance-party/"
+      },
+      {
+        "name": "Somerville PorchFest",
+        "link": "https://somervilleartscouncil.org/porchfest/"
+      }
+    ]
+  },
+  {
+    "title": "Metro Boston Bike Routes",
+    "items": [
+      {
+        "name": "Bruce Freeman Rail Trail",
+        "link": "https://brucefreemanrailtrail.org/"
+      },
+      {
+        "name": "Minuteman Bikeway",
+        "link": "https://minutemanbikeway.org/"
+      },
+      {
+        "name": "Mass Central Rail Trail",
+        "link": "https://www.masscentralrailtrail.org/"
+      }
+    ]
+  }
+]

@@ -1,0 +1,197 @@
+/* Source Serif 4 is self-hosted rather than pulled from Google Fonts, so
+   reading a post doesn't hand a third party the reader's IP. */
+@import "@fontsource-variable/source-serif-4";
+@import "@fontsource-variable/source-serif-4/wght-italic.css";
+
+:root {
+  --paper: #eceee9;
+  --ink: #1c383f;
+  --ink-soft: #55696d;
+  --accent: #4f6f2e;
+  --rule: #d3d8d0;
+  --code-bg: #e3e6df;
+  --callout-bg: #e4e8dd;
+  --warn: #8a6420;
+
+  --measure: 74ch;
+  --serif: "Source Serif 4 Variable", "Source Serif 4", Georgia, serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #14282c;
+    --ink: #e4e8e1;
+    --ink-soft: #93a5a3;
+    --accent: #a8cc7c;
+    --rule: #2c4247;
+    --code-bg: #1b3236;
+    --callout-bg: #182e31;
+    --warn: #d8ab5a;
+  }
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  font-synthesis-weight: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* One container for every page, so nothing shifts between them. Index pages
+   fill it; only the body of an article narrows to a reading measure, since
+   72rem of running prose is far past a comfortable line length. */
+.wrap {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: 2rem 1.25rem 6rem;
+}
+
+a { color: var(--accent); text-underline-offset: 0.18em; }
+a:focus-visible,
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+h1, h2, h3 { line-height: 1.2; font-weight: 600; letter-spacing: -0.011em; }
+
+code {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  background: var(--code-bg);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+
+pre {
+  font-family: var(--mono);
+  padding: 1rem 1.1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  tab-size: 2;
+}
+
+pre code { background: none; padding: 0; font-size: inherit; }
+
+/* Shiki paints its own theme background; use the page's token instead so the
+   block belongs to the page, and add a hairline to hold its edge. */
+pre.astro-code {
+  background-color: var(--code-bg) !important;
+  border: 1px solid var(--rule);
+  margin: 2rem 0;
+}
+
+/* The chip hangs off the wrapper, not the <pre>: the <pre> is the scroll
+   container, so anything positioned inside it slides along with the code. */
+.code-block {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.code-block > pre.astro-code {
+  margin: 0;
+}
+
+/* Astro tags every block with data-language, including plain output where
+   the label says nothing, and with whichever alias the author typed. */
+.code-block[data-language="plaintext"]::before,
+.code-block[data-language="text"]::before,
+.code-block[data-language="txt"]::before,
+.code-block[data-language="ansi"]::before {
+  content: none;
+}
+
+.code-block[data-language="py"]::before { content: "python"; }
+.code-block[data-language="yml"]::before { content: "yaml"; }
+.code-block[data-language="sh"]::before { content: "bash"; }
+
+/* The language, quietly, in the corner. */
+.code-block[data-language]::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  z-index: 1;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.6875rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  background: var(--rule);
+  border-radius: 0 3px 0 3px;
+  pointer-events: none;
+}
+
+/* With two themes Shiki emits both palettes as custom properties and leaves
+   the swap to CSS. The light one is inline, so only dark needs overriding. */
+@media (prefers-color-scheme: dark) {
+  .astro-code,
+  .astro-code span {
+    color: var(--shiki-dark) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
+  }
+}
+
+img { max-width: 100%; height: auto; }
+
+/* A blockquote means someone is being quoted. Editorial notes use .callout
+   below, so the two stop looking like the same thing. */
+blockquote {
+  margin: 2rem 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--rule);
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+blockquote > :first-child { margin-top: 0; }
+blockquote > :last-child { margin-bottom: 0; }
+
+/* Editorial aside: upright rather than italic, because these run long and a
+   whole paragraph of italic is tiring to read. */
+.callout {
+  margin: 2rem 0;
+  padding: 0.9rem 1.25rem 1rem;
+  background: var(--callout-bg);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 3px 3px 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.callout > :last-child { margin-bottom: 0; }
+
+.callout p {
+  font-style: normal;
+  margin: 0 0 0.7rem;
+}
+
+.callout-label {
+  margin: 0 0 0.35rem !important;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.callout-warning {
+  border-left-color: var(--warn);
+}
+
+.callout-warning .callout-label {
+  color: var(--warn);
+}
+
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; padding: 0.4rem 0.7rem 0.4rem 0; border-bottom: 1px solid var(--rule); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

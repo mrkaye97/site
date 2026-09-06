@@ -1,0 +1,95 @@
+---
+import "../styles/global.css";
+
+// Preloaded so the serif is in hand before first paint. Without this the
+// fallback renders first and the swap reflows the whole page.
+import serifRoman from "@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-normal.woff2?url";
+import serifItalic from "@fontsource-variable/source-serif-4/files/source-serif-4-latin-wght-italic.woff2?url";
+
+interface Props {
+  title: string;
+  description?: string;
+  // Crossposts point at wherever they first appeared.
+  canonical?: string;
+}
+
+const { title, description, canonical } = Astro.props;
+// Trailing slashes vary by route, so compare without one.
+const here = Astro.url.pathname.replace(/\/+$/, "") || "/";
+const nav = [
+  { href: "/writing", label: "Writing" },
+  { href: "/projects", label: "Projects" },
+  { href: "/travel", label: "Travel" },
+  { href: "/favorites", label: "Favorites" },
+  { href: "/blogroll", label: "Blogroll" },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href={serifRoman} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={serifItalic} as="font" type="font/woff2" crossorigin />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <meta name="robots" content="noindex, nofollow" />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="alternate" type="application/rss+xml" title="sn-p.sh" href="/rss.xml" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <a class="mark" href="/">sn-p.sh</a>
+        <nav>
+          {
+            nav.map((item) => (
+              <a href={item.href} aria-current={here === item.href ? "page" : undefined}>
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+      </header>
+      <main><slot /></main>
+    </div>
+  </body>
+</html>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 4.5rem;
+    flex-wrap: wrap;
+  }
+
+  .mark {
+    font-family: var(--mono);
+    font-size: 0.9375rem;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  nav a {
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+
+  nav a:hover,
+  nav a[aria-current="page"] {
+    color: var(--ink);
+    text-decoration: underline;
+  }
+</style>

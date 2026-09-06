@@ -1,0 +1,38 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="sn-p.sh" description="Placeholder.">
+  <p class="statement">Hi :)</p>
+
+  <div class="body">
+    This site is, for the most part, my space to shout thoughts into the void.
+    Writing helps me think through things and is meditative for me, especially
+    in these sloppy times we've found ourselves in. It should go without saying,
+    but all of the writing here is my own.
+  </div>
+  <div style="height: 1rem;"></div>
+  <div class="body">
+    The site's name is a play on a "snapshot," whether of my life, my views at
+    the time, places I've been, or similar.
+  </div>
+</Base>
+
+<style>
+  .statement {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    line-height: 1.3;
+    max-width: 22ch;
+    margin: 0 0 3rem;
+    text-wrap: balance;
+  }
+
+  .body {
+    max-width: 56ch;
+  }
+
+  .body p {
+    margin: 0 0 1.25rem;
+    color: var(--ink-soft);
+  }
+</style>

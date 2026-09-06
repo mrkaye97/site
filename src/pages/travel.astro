@@ -1,0 +1,147 @@
+---
+import Base from "../layouts/Base.astro";
+import photos from "../data/travel.json";
+---
+
+<Base title="Travel — sn-p.sh" description="Photographs, with where and when.">
+  <h1>Travel</h1>
+  <p class="lead">
+    This is a small compilation of the rare pictures that I've taken that I've
+    liked afterwards.
+  </p>
+
+  <div class="gallery">
+    {
+      photos.map((photo) => (
+        <figure tabindex="0">
+          <img
+            src={`/travel/${photo.filename}`}
+            width={photo.width}
+            height={photo.height}
+            loading="lazy"
+            decoding="async"
+            alt={photo.location}
+          />
+          <figcaption>
+            <strong>{photo.location}</strong>
+            <span>{photo.date}</span>
+          </figcaption>
+        </figure>
+      ))
+    }
+  </div>
+</Base>
+
+<style>
+  h1 {
+    font-size: clamp(1.875rem, 5vw, 2.5rem);
+    margin: 0 0 1.25rem;
+  }
+
+  .lead {
+    margin: 0 0 3.5rem;
+    max-width: 46ch;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+
+  /* Columns rather than a grid: every photo is landscape, so an even
+     two-column flow reads better than forcing a uniform row height. */
+  .gallery {
+    columns: 3;
+    column-gap: 1.5rem;
+  }
+
+  @media (max-width: 64rem) {
+    .gallery {
+      columns: 2;
+    }
+  }
+
+  @media (max-width: 40rem) {
+    .gallery {
+      columns: 1;
+    }
+  }
+
+  figure {
+    position: relative;
+    margin: 0 0 1.5rem;
+    break-inside: avoid;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    transition: transform 0.25s ease;
+  }
+
+  figure:hover img,
+  figure:focus-visible img {
+    transform: scale(0.97);
+  }
+
+  /* The caption sits over the photo and is revealed on hover. It stays in the
+     DOM either way, so assistive tech and the alt text still carry it. */
+  figcaption {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 2px;
+    background: rgb(12 24 26 / 62%);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  figure:hover figcaption,
+  figure:focus-visible figcaption {
+    opacity: 1;
+  }
+
+  figcaption strong {
+    font-weight: 600;
+    font-size: 1.0625rem;
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+
+  figcaption span {
+    font-style: italic;
+    font-size: 0.875rem;
+    opacity: 0.85;
+  }
+
+  /* Without a pointer there is no hover, so drop the overlay entirely and set
+     the caption below the photo instead of parking a scrim on top of it. */
+  @media (hover: none) {
+    figcaption {
+      position: static;
+      display: block;
+      padding: 0.5rem 0 0;
+      text-align: left;
+      background: none;
+      color: var(--ink-soft);
+      opacity: 1;
+    }
+    figcaption strong {
+      display: block;
+      color: var(--ink);
+    }
+    figcaption span {
+      display: block;
+    }
+    figure:hover img,
+    figure:focus-visible img {
+      transform: none;
+    }
+  }
+</style>

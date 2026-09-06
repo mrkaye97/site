@@ -1,0 +1,121 @@
+---
+import Base from "../layouts/Base.astro";
+import categories from "../data/favorites.json";
+---
+
+<Base
+  title="My three favorite — sn-p.sh"
+  description="Three of everything, give or take."
+>
+  <h1>My three favorite</h1>
+  <p class="lead">
+    Inspired by a similar thing I saw on someone else's personal site, these are
+    my three favorite (give or take) of a whole bunch of things I like and care
+    about.
+  </p>
+
+  <dl>
+    {
+      categories
+        .sort((a, b) => a.title.localeCompare(b.title))
+        .map((category) => (
+          <>
+            <dt>{category.title}</dt>
+            <dd>
+              {category.items
+                .sort((a, b) => {
+                  if (category.custom_sort) {
+                    return 1;
+                  } else {
+                    return a.name.localeCompare(b.name);
+                  }
+                })
+                .map((item, i) => (
+                  <Fragment>
+                    {i > 0 ? <span class="sep">, </span> : null}
+                    {/* set:text rather than children: a multi-line element
+                        would fold its indentation into a real space inside the
+                        link, stranding it before the separating comma. */}
+                    {item.link ? (
+                      <a href={item.link} rel="noopener" set:text={item.name} />
+                    ) : (
+                      <span set:text={item.name} />
+                    )}
+                  </Fragment>
+                ))}
+            </dd>
+          </>
+        ))
+    }
+  </dl>
+</Base>
+
+<style>
+  h1 {
+    font-size: clamp(1.875rem, 5vw, 2.5rem);
+    margin: 0 0 1.25rem;
+  }
+
+  .lead {
+    margin: 0 0 3.5rem;
+    max-width: 46ch;
+    color: var(--ink-soft);
+    text-wrap: pretty;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: minmax(11rem, 20rem) 1fr;
+    margin: 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  dt,
+  dd {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  dt {
+    color: var(--ink-soft);
+    padding-right: 2rem;
+    text-wrap: pretty;
+  }
+
+  dd {
+    margin: 0;
+    text-wrap: pretty;
+  }
+
+  dd a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  dd a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .sep {
+    color: var(--ink-soft);
+  }
+
+  /* Stacked on narrow screens, where two columns would leave neither enough
+     room. The category keeps its rule; the items hang below it. */
+  @media (max-width: 44rem) {
+    dl {
+      grid-template-columns: 1fr;
+    }
+
+    dt {
+      padding: 0.85rem 0 0;
+      border-bottom: 0;
+      font-size: 0.9375rem;
+    }
+
+    dd {
+      padding-top: 0.15rem;
+    }
+  }
+</style>
