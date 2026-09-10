@@ -3,7 +3,10 @@ import { getCollection } from "astro:content";
 import { renderCard } from "../../lib/og";
 
 export const getStaticPaths = (async () => {
-  const posts = await getCollection("blog", ({ data }) => !data.hidden);
+  const posts = await getCollection(
+    "blog",
+    ({ data }) => import.meta.env.DEV || !data.hidden,
+  );
 
   return [
     {

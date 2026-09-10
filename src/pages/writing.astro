@@ -2,9 +2,9 @@
 import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
 
-const posts = (await getCollection("blog", ({ data }) => !data.hidden)).sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-);
+const posts = (
+  await getCollection("blog", ({ data }) => import.meta.env.DEV || !data.hidden)
+).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 const byYear = new Map<number, typeof posts>();
 for (const post of posts) {
@@ -32,8 +32,9 @@ const years = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
         <h2>{year}</h2>
         <ul>
           {entries.map((post) => (
-            <li>
+            <li class:list={{ "is-hidden": post.data.hidden }}>
               <a href={`/blog/${post.id}`}>{post.data.title}</a>
+              {post.data.hidden && <span class="hidden-badge">hidden</span>}
               <p>
                 {post.data.description}
                 {post.data.original && (
@@ -118,6 +119,29 @@ const years = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
     font-style: italic;
     color: var(--ink-soft);
     text-wrap: pretty;
+  }
+
+  /* Dev-only: hidden posts are included locally but excluded from prod builds. */
+  .is-hidden a {
+    color: var(--ink-soft);
+    opacity: 0.55;
+  }
+
+  .is-hidden p {
+    opacity: 0.55;
+  }
+
+  .hidden-badge {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 0.1rem 0.5rem;
+    margin-left: 0.5rem;
+    vertical-align: middle;
   }
 
   /* Marks entries that live on someone else's site. */
