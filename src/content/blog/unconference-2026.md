@@ -22,11 +22,11 @@ Then, we played two hands of Blackjack.
 
 ```
 1: 10 4
-2: A 9
+2: A 8
 D: 6 (up) Q (hole)
 ```
 
-Player 1 hits and gets 7. Blackjack.
+Player 1 hits and gets 7 for 21.
 
 Player 2 stands.
 
@@ -34,7 +34,7 @@ The dealer has to hit, and gets 4, for 20. Player 1 wins, player 2 loses.
 
 Who made the better decision?
 
-This is a trivial example, but the point here is that if you mean "empirically correct" by "better," then Player 2 made the correct decision, and Player 1 made an incorrect decision. This is true regardless of the outcome.
+This is a trivial example, but the point here is that if you mean "correct by expectation" by "better," then Player 2 made the correct decision, and Player 1 made an incorrect decision. This is true regardless of the outcome.
 
 ### Hand 2
 
