@@ -16,9 +16,9 @@ This year, I'm giving my talk on philosophical razors and cognitive biases. I li
 
 I started by asking everyone to close their eyes, and then asking a question: Raise your hand if you believe that the outcome of a decision affects how good the decision was.
 
-Then, we played two hands of Blackjack simultaneously.
+Then, we played two hands of Blackjack.
 
-### Hands
+### Hand 1
 
 ```
 1: 10 4
@@ -34,7 +34,9 @@ The dealer has to hit, and gets 4, for 20. Player 1 wins, player 2 loses.
 
 Who made the better decision?
 
-This is a trivial example, but the point here is that if you mean "empirically correct" by "better," then Player 2 made the correct decision, and Player 1 made an incorrect decision. This is true regardless of the outcome. We play a second hand.
+This is a trivial example, but the point here is that if you mean "empirically correct" by "better," then Player 2 made the correct decision, and Player 1 made an incorrect decision. This is true regardless of the outcome.
+
+### Hand 2
 
 ```
 1: 10 6
@@ -56,6 +58,27 @@ There are tons of examples of outcome bias that can be applied to real-world sit
 
 There are a ton of things that can go wrong when shipping products to production, and the lesson from this section on outcome bias and Blackjack is that our decisions should be judged based on _the information we had at the time_, and **not** based on how they panned out if there were factors we could not control, like the dealer's down card or the cards that came off the deck, at play.
 
+## Anchoring
+
+Anchoring is another common cognitive bias, which basically is what happens when your thoughts, ideas, etc. about something are "anchored" to some previous information you have. It's been written about at length, especially in a number of works in behavioral economics, and was famously originally formalized by [Kahneman and Tversky](https://en.wikipedia.org/wiki/Anchoring_effect).
+
+For this exercise, we split into two groups. Both were presented with two sentences:
+
+### Group 1
+
+> Without discussing with the group: Do you think there are more or fewer than 5 billion trees on Earth? Write down how many trees you think there are.
+
+### Group 2
+
+> Without discussing with the group: Do you think there are more or fewer than 5 trillion trees on Earth? Write down how many trees you think there are.
+
+Importantly, the only difference between the prompts here is the anchor. One group sees five billion. The other, five trillion. I'm writing this blog post in advance, so I don't know what the guesses are, but the theory is that the group that sees five billion will be anchored to the significantly lower number, and will make guesses that are significantly lower as a result, than the group anchored to five trillion.
+
+### In Real Life
+
+There are two examples that I wanted to mention related to anchoring that were particularly work specific, both related to pricing:
+
+1. We used to (currently phasing out) have a $500 / month plan as our first "paid" tier (above pay-as-you-go). This always struck me as pretty steep. Eventually, I realized I felt this way largely because I was anchored to what an old company of mine spent on compute and SaaS vendors, and what we viewed as expensive. Since that bar was set much lower than $500, I was heavily biased downwards on what I thought our pricing should be. Note that that's not to say that $500 is _not_ too high, but just something to be aware of.
+2. Customers are often comparing Hatchet to Temporal, which is significantly more expensive. Often, we discuss pricing as "1/4th of what it costs on Temporal" or similar. This is another obvious case of anchoring. In this case, the anchor is Temporal's pricing, which is affecting how we think about our own pricing (rather than reasoning from first principles, for instance).
 
 
-2. _Anchoring_
