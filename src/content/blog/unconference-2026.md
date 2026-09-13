@@ -8,7 +8,7 @@ hidden: true
 
 At Hatchet, we've been developing something of a tradition during offsites that we've been calling an "Unconference." The idea is that each member of the team gives a short (think 20-30 minutes) talk on something of their choosing, which helps us get to know each other better and maybe learn something new in the process.
 
-Past unconference talks have included a deep dive into a teammate's life story, a workshop on how to improve your writing, and the history of a prior startup. My last talk was on basic concepts in game theory: [The Prisoner's Dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma), the [Stag Hunt](https://en.wikipedia.org/wiki/Stag_hunt), [Knife-Edge Equilibria](https://jrm-research.blogspot.com/2007/05/knife-edge-equilibrium.html), and how some of these basic games can apply to real world situations.
+Past unconference talks have included a deep dive into a teammate's life story, a workshop on how to improve your writing, and the history of a prior startup. My last talk was on basic concepts in game theory: [The Prisoner's Dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma), the [Stag Hunt](https://en.wikipedia.org/wiki/Stag_hunt), [Knife-Edge Equilibria](https://jrm-research.blogspot.com/2007/05/knife-edge-equilibrium.html), and how some of these basic games can apply to real-world situations.
 
 This year, I'm giving my talk on philosophical razors and cognitive biases. I like giving "talks" that are mostly made up of exercises. Last year, we played the games to help everyone work through the decision-making for themselves, since game theory is ultimately about making decisions. This year, we did the same.
 
@@ -26,7 +26,7 @@ Then, we played two hands of Blackjack.
 D: 6 (up) Q (hole)
 ```
 
-Player 1 hits, and gets 7. Blackjack.
+Player 1 hits and gets 7. Blackjack.
 
 Player 2 stands.
 
@@ -41,28 +41,28 @@ This is a trivial example, but the point here is that if you mean "empirically c
 ```
 1: 10 6
 2: A 7
-D: 8 (up), 8 (hole)
+D: 8 (up) 8 (hole)
 ```
 
-Player 1 hits and gets K, and busts.
+Player 1 hits, gets K, and busts.
 
 Player 2 hits and gets 7 to make 15, hits again, gets Q, and busts.
 
 The dealer hits, gets J, and busts.
 
-Who made the better decision here? Again, empirically, Player 1 played correctly. Player 2 should not have initially hit. They both bust, and ultimately it turns out the dealer busted anyways. Womp womp. The house wins.
+Who made the better decision here? Again, empirically, Player 1 played correctly. Player 2 should not have initially hit. They both bust, and ultimately it turns out the dealer busted anyway. Womp womp. The house wins.
 
 ### In Real Life
 
-There are tons of examples of outcome bias that can be applied to real-world situations. In tech start ups specifically, an obvious example is making a bet on a product that ultimately doesn't work out for whatever reason. Maybe people don't like it, a competitor ships something similar or better and people opt to use that, the market shifts away, it turns out that there was some unforeseen obstacle that's not practical to work through, and so on.
+There are tons of examples of outcome bias that can be applied to real-world situations. In tech startups specifically, an obvious example is making a bet on a product that ultimately doesn't work out for whatever reason. Maybe people don't like it; a competitor ships something similar or better and people opt to use that; the market shifts away; it turns out that there was some unforeseen obstacle that's not practical to work through, and so on.
 
-There are a ton of things that can go wrong when shipping products to production, and the lesson from this section on outcome bias and Blackjack is that our decisions should be judged based on _the information we had at the time_, and **not** based on how they panned out if there were factors we could not control, like the dealer's down card or the cards that came off the deck, at play.
+There are a ton of things that can go wrong when shipping products to production, and the lesson from this section on outcome bias and Blackjack is that our decisions should be judged based on _the information we had at the time_, and **not** on how they panned out when factors we couldn't control (like the dealer's hole card or the cards that came off the deck) were at play.
 
 ## Anchoring
 
-Anchoring is another common cognitive bias, which basically is what happens when your thoughts, ideas, etc. about something are "anchored" to some previous information you have. It's been written about at length, especially in a number of works in behavioral economics, and was famously originally formalized by [Kahneman and Tversky](https://en.wikipedia.org/wiki/Anchoring_effect).
+Anchoring is another common cognitive bias, which is basically what happens when your thoughts, ideas, etc. about something are "anchored" to some previous information you have. It's been written about at length, especially in a number of works in behavioral economics, and was famously formalized by [Kahneman and Tversky](https://en.wikipedia.org/wiki/Anchoring_effect).
 
-For this exercise, we split into two groups. Both were presented with two sentences:
+For this exercise, we split into two groups. Each was presented with a slightly different prompt:
 
 ### Group 1
 
@@ -72,61 +72,61 @@ For this exercise, we split into two groups. Both were presented with two senten
 
 > Without discussing with the group: Do you think there are more or fewer than 5 trillion trees on Earth? Write down how many trees you think there are.
 
-Importantly, the only difference between the prompts here is the anchor. One group sees five billion. The other, five trillion. I'm writing this blog post in advance, so I don't know what the guesses are, but the theory is that the group that sees five billion will be anchored to the significantly lower number, and will make guesses that are significantly lower as a result, than the group anchored to five trillion.
+Importantly, the only difference between the prompts here is the anchor. One group sees five billion. The other, five trillion. I'm writing this blog post in advance, so I don't know what the guesses are, but the theory is that the group that sees five billion will be anchored to the significantly lower number, and will make significantly lower guesses as a result than the group anchored to five trillion.
 
 ### In Real Life
 
-There are two examples that I wanted to mention related to anchoring that were particularly work specific, both related to pricing:
+There are two examples that I wanted to mention related to anchoring that were particularly work-specific, both related to pricing:
 
-1. We used to (currently phasing out) have a $500 / month plan as our first "paid" tier (above pay-as-you-go). This always struck me as pretty steep. Eventually, I realized I felt this way largely because I was anchored to what an old company of mine spent on compute and SaaS vendors, and what we viewed as expensive. Since that bar was set much lower than $500, I was heavily biased downwards on what I thought our pricing should be. Note that that's not to say that $500 is _not_ too high, but just something to be aware of.
-2. Customers are often comparing Hatchet to Temporal, which is significantly more expensive. Often, we discuss pricing as "1/4th of what it costs on Temporal" or similar. This is another obvious case of anchoring. In this case, the anchor is Temporal's pricing, which is affecting how we think about our own pricing (rather than reasoning from first principles, for instance).
+1. We used to have (and are currently phasing out) a $500/month plan as our first "paid" tier (above pay-as-you-go). This always struck me as pretty steep. Eventually, I realized I felt this way largely because I was anchored to what an old company of mine spent on compute and SaaS vendors, and what we viewed as expensive. Since that bar was set much lower than $500, I was heavily biased downwards on what I thought our pricing should be. That's not to say $500 _isn't_ too high, but it's something to be aware of.
+2. Customers are often comparing Hatchet to Temporal, which is significantly more expensive. Often, we discuss pricing as "a quarter of what it costs on Temporal" or similar. This is another obvious case of anchoring. In this case, the anchor is Temporal's pricing, which is affecting how we think about our own pricing (rather than reasoning from first principles, for instance).
 
 ## Endogeneity
 
-The last "bias" I discussed was what economists often refer to as "endogeneity," or some might think of as mistaking correlation for causation. It's not actually a _cognitive_ bias, per sé, but you might think of it as a combination of biases like survivorship bias, confirmation bias, experimenter's bias, etc. combining into one pervasive problem across tons of companies, and start ups in particular.
+The last "bias" I discussed was what economists often refer to as "endogeneity," or what some might think of as mistaking correlation for causation. It's not actually a _cognitive_ bias, per se, but you might think of it as a combination of biases like survivorship bias, confirmation bias, experimenter's bias, etc. combining into one pervasive problem across tons of companies, and startups in particular.
 
 This is the section I often like to refer to as "Reforge Bullshit," affectionately named after [Reforge](https://www.reforge.com/), which largely sells poor causal claims as a service.
 
 ### 7 Friends in 10 Days
 
-The exercise for this section is more of a conversation. First, Facebook, who maybe is responsible for the prevalence of Reforge Bullshit in today's world.
+The exercise for this section is more of a conversation. First up: Facebook, which is maybe responsible for the prevalence of Reforge Bullshit in today's world.
 
 > People who add 7 friends in their first 10 days on Facebook end up retaining.
 
-Dead simple, and it gives product teams a focus: If we can drive people to add friends, then they will retain at higher rates than they otherwise would.
+Dead simple, and it gives product teams a focus: if we can drive people to add friends, then they will retain at higher rates than they otherwise would.
 
-This type of thinking took the world by storm, and there have been notable famous other "aha moment" campaigns in the years since, including Airbnb's "time to first booking," Slack's "the team has collectively sent 2,000 messages," and so on.
+This type of thinking took the world by storm, and there have been other famous "aha moment" campaigns in the years since, including Airbnb's "time to first booking," Slack's "the team has collectively sent 2,000 messages," and so on.
 
 ### Aha Moments at Hatchet
 
-Once we discussed Facebook, Airbnb, and Slack, I posed the same question to the group who had just been anchored to these other ideas: Could you propose a similar aha moment for Hatchet that we could use to drive more signups and better retention? And I made a bet to the group: I bet that I'd be able to make the same refutation to all of the suggestions that would be made (which I had not heard yet), in addition to the other three.
+Once we discussed Facebook, Airbnb, and Slack, I posed the same question to the group who had just been anchored to these other ideas: Could you propose a similar aha moment for Hatchet that we could use to drive more signups and better retention? And I made the group a bet: that I'd be able to make the same refutation to every suggestion (none of which I had heard yet), in addition to the other three.
 
-The refutation is this: Is it possible that, instead of it being the case that people who add seven friends in their first ten days end up retaining, that users who are going to retain _for some other, unknown or unknowable (latent) reason_, add seven friends in their first ten days?
+The refutation is this: Is it possible that, instead of it being the case that people who add seven friends in their first ten days end up retaining, users who are going to retain _for some other, unknown or unknowable (latent) reason_ add seven friends in their first ten days?
 
-At Hatchet, the same applies. Maybe it's not that people who add N team members in the first M days, or people who run a worker in their first H hours end up retaining, but instead it's that people who are going to retain _anyways_ do these things, because of course they do.
+At Hatchet, the same applies. Maybe it's not that people who add N team members in the first M days, or people who run a worker in their first H hours end up retaining, but instead that people who are going to retain _anyway_ do these things, because of course they do.
 
-In other words, we have an _endogeneity problem_: It's likely that the causation is backwards, or, in some cases, both things are explained by a third variable.
+In other words, we have an _endogeneity problem_: it's likely that the causation is backwards, or, in some cases, both things are explained by a third variable.
 
 ### In The Real World
 
-Linear, somewhat famously, does not run A/B tests. Instead, they expect the team to have _taste_, and strong opinions. [They argue](https://x.com/karrisaarinen/status/1706745692965027994) that too often, A/B tests are used as a crutch or just over-optimize for internal incentives vs. what's actually best for the product. Instead, they want their product teams to have strong opinions about what makes for the best experience, and to ship it.
+Linear, somewhat famously, does not run A/B tests. Instead, they expect the team to have _taste_ and strong opinions. [They argue](https://x.com/karrisaarinen/status/1706745692965027994) that too often, A/B tests are used as a crutch or to over-optimize for internal incentives vs. what's actually best for the product. Instead, they want their product teams to have strong opinions about what makes for the best experience, and to ship it.
 
 Some people are probably horrified by this. But there are a few reasons why I much prefer this approach:
 
 First, it's fast. No waiting around for tests to complete. Lean into your own product knowledge, ship, collect feedback, iterate.
 
-Second, product analytics and product data in general are riddled with issues, such as ad blockers, identifying users across devices, users having multiple accounts, and so on. Not only this, but data warehouses often end up being a mess, and companies tend to not be able to agree on definitions of metrics, which often render any data-driven decision-making moot.
+Second, product analytics and product data in general are riddled with issues, such as ad blockers, identifying users across devices, users having multiple accounts, and so on. On top of that, data warehouses often end up being a mess, and companies tend to not be able to agree on definitions of metrics, which often renders any data-driven decision-making moot.
 
-And finally, and maybe most importantly, it forces product teams to come up with a hypothesis for what will drive the metrics they care about (or the experience they care about) _beforehand_. Too often, teams work backwards: They look at a dashboard, which then informs how they think about what might make a good aha moment. Instead, we should reason _forwards_, thinking from first principles about what aha moment might meaningfully affect the behaviors we care about.
+And finally, and maybe most importantly, it forces product teams to come up with a hypothesis for what will drive the metrics they care about (or the experience they care about) _beforehand_. Too often, teams work backwards: they look at a dashboard, which then informs how they think about what might make a good aha moment. Instead, we should reason _forwards_, thinking from first principles about what aha moment might meaningfully affect the behaviors we care about.
 
 ## Other Fun Biases
 
 I wanted to wrap up my talk by name-dropping a few other fun biases that come up often that I didn't get a chance to discuss.
 
-The **Gambler's Fallacy** is the bias that often manifests at the Roulette table: We land on red three spins in a row, and someone says "it _must_ land on black next time" even though spins are independent events.
+The **Gambler's Fallacy** is the bias that often manifests at the roulette table: we land on red three spins in a row, and someone says "it _must_ land on black next time," even though spins are independent events.
 
-**Loss aversion** is the bias that makes people feel the "pain" of losing $10 after finding it on the sidewalk more than having never had found the $10 in the first place.
+**Loss aversion** is the bias that makes people feel the "pain" of losing $10 after finding it on the sidewalk more than never having found the $10 in the first place.
 
-And finally, the **Dunning-Kruger Effect** can be thought of as the bias that makes relatively inexperienced people overestimate their ability while more experienced people underestimate it. Or, put differently, it's the effect that might make me look back on this post in five years and cringe and how naïve I was.
+And finally, the **Dunning-Kruger Effect** can be thought of as the bias that makes relatively inexperienced people overestimate their ability while more experienced people underestimate it. Or, put differently, it's the effect that might make me look back on this post in five years and cringe at how naïve I was.
 
 Thanks for coming to my talk!
