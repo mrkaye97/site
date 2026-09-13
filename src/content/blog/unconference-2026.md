@@ -109,6 +109,8 @@ In other words, we have an _endogeneity problem_: it's likely that the causation
 
 ### In The Real World
 
+From my point of view, there's a basic problem here. We tend to reason backwards from dashboards to make hypotheses, and then either don't run A/B tests to validate them (in the aha moment case) or end up with flat test results because it turned out our hypothesis wasn't causal after all. For instance, we could easily have a dashboard that shows retention broken down by the number of days to run their first worker, see a steep drop-off, and incorrectly conclude that it's likely that running a worker sooner causes retention. This is a wholly incorrect (and unscientific, in the scientific method sense) way of reasoning.
+
 Linear, somewhat famously, does not run A/B tests. Instead, they expect the team to have _taste_ and strong opinions. [They argue](https://x.com/karrisaarinen/status/1706745692965027994) that too often, A/B tests are used as a crutch or to over-optimize for internal incentives vs. what's actually best for the product. Instead, they want their product teams to have strong opinions about what makes for the best experience, and to ship it.
 
 Some people are probably horrified by this. But there are a few reasons why I much prefer this approach:
