@@ -3,7 +3,7 @@ title: "Cognitive Biases"
 description: "My 2026 'Unconference' Talk"
 date: "2026-09-10"
 tags: ["misc"]
-hidden: true
+hidden: false
 ---
 
 At Hatchet, we've been developing something of a tradition during offsites that we've been calling an "Unconference." The idea is that each member of the team gives a short (think 20-30 minutes) talk on something of their choosing, which helps us get to know each other better and maybe learn something new in the process.
@@ -120,6 +120,12 @@ First, it's fast. No waiting around for tests to complete. Lean into your own pr
 Second, product analytics and product data in general are riddled with issues, such as ad blockers, identifying users across devices, users having multiple accounts, and so on. On top of that, data warehouses often end up being a mess, and companies tend to not be able to agree on definitions of metrics, which often renders any data-driven decision-making moot.
 
 And finally, and maybe most importantly, it forces product teams to come up with a hypothesis for what will drive the metrics they care about (or the experience they care about) _beforehand_. Too often, teams work backwards: they look at a dashboard, which then informs how they think about what might make a good aha moment. Instead, we should reason _forwards_, thinking from first principles about what aha moment might meaningfully affect the behaviors we care about.
+
+## Some Reflection
+
+The talk went _okay_ I would say. The blackjack examples, which sounded good in my head beforehand, seemed a little bit contrived, and we probably should've done something else. It also would've been better to have more concrete ties back to more specific things we're working on, or have discussed recently.
+
+It also was _long_, which is a note to self for next time.
 
 ## Other Fun Biases
 
