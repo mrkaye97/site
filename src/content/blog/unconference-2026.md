@@ -10,7 +10,7 @@ At Hatchet, we've been developing something of a tradition during offsites that 
 
 Past unconference talks have included a deep dive into a teammate's life story, a workshop on how to improve your writing, and the history of a prior startup. My last talk was on basic concepts in game theory: [The Prisoner's Dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma), the [Stag Hunt](https://en.wikipedia.org/wiki/Stag_hunt), [Knife-Edge Equilibria](https://jrm-research.blogspot.com/2007/05/knife-edge-equilibrium.html), and how some of these basic games can apply to real-world situations.
 
-This year, I'm giving my talk on philosophical razors and cognitive biases. I like giving "talks" that are mostly made up of exercises. Last year, we played the games to help everyone work through the decision-making for themselves, since game theory is ultimately about making decisions. This year, we did the same.
+This year, I'm giving my talk on cognitive biases. I like giving "talks" that are mostly made up of exercises. Last year, we played the games to help everyone work through the decision-making for themselves, since game theory is ultimately about making decisions. This year, we did the same.
 
 ## Outcome Bias
 
