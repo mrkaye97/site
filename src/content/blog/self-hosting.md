@@ -2,8 +2,7 @@
 title: "The Joys of Self-Hosting"
 description: "Reflections on ~1.5 years with my first Raspberry Pi"
 date: "2026-10-04"
-tags: ["engineering"]
-hidden: true
+tags: ["engineering", "self-hosting"]
 ---
 
 I bought my first Raspberry Pi in May 2025. At the time, I think I was just on the hunt for a new hobby project after realizing that flashing Ubuntu Server onto my old MacBook Pro probably wasn't a good way to run a home server. So I figured I'd go for it, and spent the $150 or so on the Pi 5.
@@ -24,8 +23,6 @@ Over time, I've really valued owning the hardware that all of my stuff is runnin
 
 I've also been able to cord cut a bit. I've been loving not paying Spotify and instead going back to owning my own music collection. I've been buying CDs, which I probably hadn't done in at least fifteen years, and had fun digging through boxes of music in a couple of local record stores and thrift shops in Cambridge and Bozeman lately looking for music to add to my collection.
 
-It's been a similar story for not needing to pay for Obsidian's sync offering to sync notes between devices too. Obsidian's a pretty important piece of tech for me which I use for all sorts of stuff, and the "wow, it works!" moment when LiveSync first successfully synced a note from my laptop to my phone reminded me of the old joy of programming.
+It's been a similar story for not needing to pay for Obsidian's sync offering to sync notes between devices. Obsidian's a pretty important piece of tech for me which I use for all sorts of stuff, and the "wow, it works!" moment when LiveSync first successfully synced a note from my laptop to my phone reminded me of the old joy of programming.
 
-I've also found that I have a long list of other possible ideas for things I can self-host. I've been thinking a lot about [VaultWarden](https://github.com/dani-garcia/vaultwarden) and [Immich](https://immich.app/) lately to help get me off of 1Password and Google Photos, but haven't taken the plunge yet because I'm still nervous about backups. Maybe soon!
-
-
+I have a long list of other possible ideas for things I can self-host. I've been thinking a lot about [Vaultwarden](https://github.com/dani-garcia/vaultwarden) and [Immich](https://immich.app/) lately to help get me off of 1Password and Google Photos, but haven't taken the plunge yet because I'm still nervous about backups. Maybe soon!
