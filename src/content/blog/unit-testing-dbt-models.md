@@ -3,7 +3,6 @@ title: "Unit Testing dbt Models"
 description: "Letting yourself sleep at night by ensuring your SQL is correct"
 date: "2023-07-09"
 tags: ["dbt", "analytics engineering", "python"]
-hidden: true
 ---
 :::note
 As of version 1.8, dbt now supports unit testing! You can read more [in the documentation](https://docs.getdbt.com/docs/build/unit-tests).
