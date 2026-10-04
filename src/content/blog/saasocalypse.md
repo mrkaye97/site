@@ -1,5 +1,5 @@
 ---
-title: "On SaaS, Enshittification, and the SaaS-ocalypse"
+title: "Enshittification and the SaaS-ocalypse"
 description: "Getting back to building things people want"
 date: "2026-09-05"
 tags: ["engineering", "saas", "product"]
