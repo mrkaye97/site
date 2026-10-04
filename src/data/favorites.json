@@ -3,8 +3,8 @@
     "title": "Authors",
     "items": [
       {
-        "name": "Cal Newport",
-        "link": "https://app.thestorygraph.com/authors/0968e7ef-339e-4fbf-8ed3-03bbd52a63bb?page=4"
+        "name": "Ann Patchett",
+        "link": "https://app.thestorygraph.com/authors/d7aac786-58ab-43f4-8c36-08b75c9bfc46"
       },
       {
         "name": "Khaled Hosseini",
@@ -13,23 +13,6 @@
       {
         "name": "Sally Rooney",
         "link": "https://app.thestorygraph.com/authors/c376f2e1-78fc-44a2-b0d8-e6430a056b7e"
-      }
-    ]
-  },
-  {
-    "title": "Beers",
-    "items": [
-      {
-        "name": "Heady Topper",
-        "link": "https://untappd.com/b/the-alchemist-heady-topper/4691"
-      },
-      {
-        "name": "King Sue",
-        "link": "https://untappd.com/b/toppling-goliath-brewing-co-king-sue/594015"
-      },
-      {
-        "name": "Very Green",
-        "link": "https://untappd.com/b/tree-house-brewing-company-very-green/689944"
       }
     ]
   },
@@ -115,23 +98,6 @@
       {
         "name": "B-Tree",
         "link": "https://en.wikipedia.org/wiki/B-tree"
-      }
-    ]
-  },
-  {
-    "title": "Fictional Characters",
-    "items": [
-      {
-        "name": "Elaine Benes",
-        "link": "https://en.wikipedia.org/wiki/Elaine_Benes"
-      },
-      {
-        "name": "Oberyn Martell",
-        "link": "https://awoiaf.westeros.org/index.php/Oberyn_Martell"
-      },
-      {
-        "name": "Samwise Gamgee",
-        "link": "https://lotr.fandom.com/wiki/Samwise_Gamgee"
       }
     ]
   },
@@ -252,40 +218,6 @@
       {
         "name": "Pozole Verde with Chicken",
         "link": "https://www.seriouseats.com/recipes/2017/01/pozole-verde-de-pollo-green-mexican-hominy-and-chicken-soup-recipe.html"
-      }
-    ]
-  },
-  {
-    "title": "Ski Runs",
-    "items": [
-      {
-        "name": "High Boy (Alf's High Rustler)",
-        "link": "https://www.alta.com/"
-      },
-      {
-        "name": "Three Forks",
-        "link": "https://bigskyresort.com/"
-      },
-      {
-        "name": "Daly Bowl",
-        "link": "https://www.deervalley.com/blog/deer-valley-winter-trail-map"
-      }
-    ]
-  },
-  {
-    "title": "Spirits",
-    "items": [
-      {
-        "name": "Fernet",
-        "link": "https://us.fernetbranca.com/"
-      },
-      {
-        "name": "Islay Scotch",
-        "link": "https://www.malts.com/en-us/distilleries/lagavulin"
-      },
-      {
-        "name": "Mezcal",
-        "link": "https://mezcaloteca.com/en"
       }
     ]
   },
