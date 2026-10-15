@@ -3,7 +3,7 @@ title: "I Was Wrong About A/B Testing"
 description: "One lesson after six years of missing the forest for the trees"
 date: "2026-10-14"
 tags: ["engineering", "career", "growth"]
-hidden: true
+hidden: false
 ---
 
 When I started my second job six years ago (at CollegeVine, as a data scientist), my then-manager-now-CTO asked me where I saw my career in five years. I told him I didn't know: It felt so far away.
