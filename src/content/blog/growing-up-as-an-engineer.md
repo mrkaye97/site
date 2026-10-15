@@ -1,6 +1,6 @@
 ---
 title: "I Was Wrong About A/B Testing"
-description: "One lesson after six years of losing the forest for the trees"
+description: "One lesson after six years of missing the forest for the trees"
 date: "2026-10-14"
 tags: ["engineering", "career", "growth"]
 hidden: true
