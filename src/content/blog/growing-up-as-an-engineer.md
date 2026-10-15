@@ -12,7 +12,9 @@ At the time, I had about six months of work experience, and was feeling a combin
 
 Over time, I've become more and more aware that much of what I learned in college and from perusing the internet about working in tech is not always great advice. My experience has largely been that there's one footgun that prevents people in roles like mine from being effective, which is basically the opposite of the two principles I try to follow.
 
-It's **dogmatism**. I can't count the number of times I've heard arguments in favor of approaching a problem a certain way that basically boil down to "that's just how you're supposed to do it." This often stems from good intentions: building systems that scale, not accumulating technical debt, running A/B tests so we know with some degree of confidence which version of our button performs better, and so on. Many engineers forget that the system they're working on currently serves no traffic at all, and that instead of spending a month building an event-driven-pub-sub-abstract-bean-factory monstrosity, they should just get something into the hands of their customers.
+It's **dogmatism**.
+
+I can't count the number of times I've heard arguments in favor of approaching a problem a certain way that basically boil down to "that's just how you're supposed to do it." This often stems from good intentions: building systems that scale, not accumulating technical debt, running A/B tests so we know with some degree of confidence which version of our button performs better, and so on. Many engineers forget that the system they're working on currently serves no traffic at all, and that instead of spending a month building an event-driven-pub-sub-abstract-bean-factory monstrosity, they should just get something into the hands of their customers.
 
 Ultimately, customers don't know if your database is just a JSON file or if you're using the sexiest new features of Postgres. They just want to see widgets on the screen, ideally quickly. The faster you can get something working to your customers, the faster you can get feedback, and, importantly, the faster you can _work on something else_.
 
