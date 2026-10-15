@@ -22,6 +22,8 @@ Initially at CollegeVine, I was a big proponent of running A/B tests, and, espec
 
 Nowadays, I'm not much of a believer in A/B tests (in most cases). Instead, I take something closer to [Linear's view](https://x.com/karrisaarinen/status/1706745692965027994) of having strong opinions and building something delightful.
 
-In other words, I was missing the forest for the trees, and it's taken me about five years to realize that, or at least be willing to admit it. Instead, I should have been more pragmatic: "Does it _really_ matter if we don't A/B test this feature, and conversion goes down by half a percent as a result, but we save a month of toil in the process?" If the cost of a half-percent drop in conversion is significant (think Amazon), then by all means. But the engineers working on your CRUD app serving 500 customers probably have better ways to spend their time.
+In other words, I was missing the forest for the trees. And it's taken me about five years to realize that, or at least be willing to admit it. Instead, I should have been more pragmatic: "Does it _really_ matter if we don't A/B test this feature, and conversion goes down by half a percent as a result, but we save a month of toil in the process?" If the cost of a half-percent drop in conversion is significant (think Amazon), then by all means. But the engineers working on your CRUD app serving 500 customers probably have better ways to spend their time.
 
-These days, if my manager asked me where I'd like to be in five years, I'd have an answer: retired.
+Six years ago, I didn't know where I saw myself in five years. I had lots of vague ideas about wanting to lead a team and be a mentor, and doing cool statistical and other data scientific work to help The Company make more informed decisions, but nothing concrete.
+
+These days, if my manager asked me where I'd like to be in five years, I'd have an answer: retired, and proud of having built a beloved product.
