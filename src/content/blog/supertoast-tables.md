@@ -1,5 +1,5 @@
 ---
-title: "Supertoast tables"
+title: "Supertoast Tables"
 description: "How we prevent large payloads from blowing up our Postgres instances"
 date: "2026-03-06"
 tags: ["engineering"]

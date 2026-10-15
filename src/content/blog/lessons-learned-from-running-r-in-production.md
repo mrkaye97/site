@@ -1,5 +1,5 @@
 ---
-title: "Lessons Learned From Running R in Production"
+title: "Lessons Learned from Running R in Production"
 description: "And why I probably won't be doing it again"
 date: "2023-06-29"
 tags: ["R", "data science"]

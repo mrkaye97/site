@@ -1,6 +1,6 @@
 ---
 title: "Cognitive Biases"
-description: "My 2026 'Unconference' Talk"
+description: "My 2026 'unconference' talk"
 date: "2026-09-10"
 tags: ["misc"]
 hidden: false

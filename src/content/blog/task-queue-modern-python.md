@@ -1,5 +1,5 @@
 ---
-title: "A task queue for modern Python applications"
+title: "A Task Queue for Modern Python Applications"
 description: "How Hatchet provides a modern task queue for Python with first-class support for type hints, Pydantic, and async/await."
 date: "2025-04-10"
 tags: ["engineering"]
