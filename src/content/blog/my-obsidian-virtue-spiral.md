@@ -3,7 +3,7 @@ title: "My newfound love for Obsidian"
 description: "And how it consolidated a bunch of things in my life"
 date: "2026-10-24"
 tags: ["lifestyle", "engineering"]
-hidden: true
+hidden: false
 ---
 
 A few years ago, I found out about [Obsidian](https://obsidian.md/) because I noticed a cool logo on my coworker's screen while she was screen sharing during an interview, so I went perusing to find out what it was. I downloaded it, wrote my first note, and fell into a trap right away.
