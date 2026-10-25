@@ -55,7 +55,13 @@ const stamp = post.data.date.toLocaleDateString("en-US", {
       </p>
       <div class="prose"><Content /></div>
     </article>
-    <aside class="toc-rail"><TableOfContents headings={headings} /></aside>
+    {
+      post.data.toc && (
+        <aside class="toc-rail">
+          <TableOfContents headings={headings} />
+        </aside>
+      )
+    }
   </div>
   <p class="back"><a href="/writing">All writing</a></p>
 </Base>
