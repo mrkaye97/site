@@ -3,7 +3,7 @@ title: "Calibration and Evaluating Classification Models"
 description: "The least-taught, most important classification diagnostic"
 date: "2023-03-20"
 tags: ["data science"]
-hidden: true
+hidden: false
 ---
 
 There's something of a complexity trajectory in evaluating classification models that I've observed over the past few years. It starts with accuracy. But soon after learning about accuracy, data scientists are taught that accuracy is problematic for two reasons:
