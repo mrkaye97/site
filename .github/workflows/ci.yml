@@ -43,4 +43,5 @@ jobs:
         run: pnpm check
 
       - name: Build
+        if: github.ref != 'refs/heads/main'
         run: pnpm build
