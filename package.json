@@ -7,7 +7,6 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "start": "node ./dist/server/entry.mjs",
     "verify": "pnpm format:check && pnpm lint && pnpm check && pnpm build",
     "check": "astro check",
     "lint": "eslint .",
@@ -16,7 +15,6 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@astrojs/node": "^9.0.0",
     "@astrojs/rss": "^4.0.0",
     "@fontsource-variable/source-serif-4": "^5.1.0",
     "astro": "^5.0.0",

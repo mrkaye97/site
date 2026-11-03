@@ -1,4 +1,8 @@
-name: Publish image
+name: Publish site
+
+# Builds the site and uploads it as site.tar.gz (plus its checksum,
+# site.sha256) to the `latest` release. The Pi polls the checksum and swaps in
+# new builds (see crons/scripts/pull_deploy.sh in the pi repo).
 
 on:
   push:
@@ -6,46 +10,55 @@ on:
       - main
   workflow_dispatch:
 
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
 jobs:
   publish:
-    runs-on: ubuntu-24.04-arm
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Buildx
-        uses: docker/setup-buildx-action@v3
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
 
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v3
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          node-version: 22
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install --frozen-lockfile
 
       - name: Restore Astro cache
-        id: astro-cache
         uses: actions/cache@v4
         with:
-          path: astro-cache
-          key: astro-docker-${{ github.sha }}
-          restore-keys: astro-docker-
+          path: node_modules/.astro
+          key: astro-${{ github.sha }}
+          restore-keys: astro-
 
-      - name: Inject Astro cache into BuildKit
-        uses: reproducible-containers/buildkit-cache-dance@v3
-        with:
-          cache-map: |
-            {
-              "astro-cache": {
-                "target": "/app/node_modules/.astro",
-                "id": "astro"
-              }
-            }
-          skip-extraction: ${{ steps.astro-cache.outputs.cache-hit }}
+      - name: Build
+        run: pnpm build
 
-      - name: Build and push
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          platforms: linux/arm64
-          push: true
-          tags: mrkaye97/site:latest
+      - name: Package
+        run: |
+          tar -czf site.tar.gz -C dist .
+          sha256sum site.tar.gz > site.sha256
+
+      - name: Upload to the latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view latest >/dev/null 2>&1 ||
+            gh release create latest --target main --title "Latest build" \
+              --notes "Built by the Publish site workflow. The Pi deploys whatever is here."
+          # The Pi watches site.sha256, so upload it last: by the time it
+          # changes, the matching tarball is already there.
+          gh release upload latest site.tar.gz --clobber
+          gh release upload latest site.sha256 --clobber

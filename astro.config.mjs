@@ -1,16 +1,15 @@
 // @ts-check
 import { defineConfig } from "astro/config";
-import node from "@astrojs/node";
 import remarkDirective from "remark-directive";
 import { remarkCallouts } from "./src/plugins/callouts.mjs";
 import { rehypeCodeBlocks } from "./src/plugins/code-blocks.mjs";
 
 export default defineConfig({
   site: "https://sn-p.sh",
-  // Pages are prerendered by default; anything that needs a request opts out
-  // with `export const prerender = false`.
+  // Fully static: the build output is plain files, served by Caddy on the Pi
+  // (see .github/workflows/publish.yml). Adding a server-rendered page would
+  // mean bringing back an adapter such as @astrojs/node.
   output: "static",
-  adapter: node({ mode: "standalone" }),
   server: { host: true, port: 3000 },
   markdown: {
     remarkPlugins: [remarkDirective, remarkCallouts],
