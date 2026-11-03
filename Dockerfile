@@ -7,6 +7,7 @@ RUN pnpm install --frozen-lockfile
 COPY . .
 
 RUN --mount=type=cache,id=astro,target=/app/node_modules/.astro pnpm build
+RUN CI=true pnpm prune --prod
 
 FROM node:24-alpine
 WORKDIR /app

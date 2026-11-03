@@ -49,5 +49,3 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: mrkaye97/site:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
