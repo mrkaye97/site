@@ -26,13 +26,6 @@ jobs:
       - name: Install
         run: pnpm install --frozen-lockfile
 
-      - name: Restore Astro cache
-        uses: actions/cache@v4
-        with:
-          path: node_modules/.astro
-          key: astro-${{ github.sha }}
-          restore-keys: astro-
-
       - name: Format
         run: pnpm format:check
 
@@ -41,6 +34,15 @@ jobs:
 
       - name: Check
         run: pnpm check
+
+      # On main, the Publish site workflow builds the site instead.
+      - name: Restore Astro cache
+        if: github.ref != 'refs/heads/main'
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.astro
+          key: astro-${{ github.sha }}
+          restore-keys: astro-
 
       - name: Build
         if: github.ref != 'refs/heads/main'
