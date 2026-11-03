@@ -52,5 +52,3 @@ In statistics world, it might be helpful to think of poor calibration as a bias 
 ## Wrapping Up
 
 Hopefully I've convinced you that the calibration of your classifier's predictions is important and practically meaningful. If a model's predictions are poorly calibrated, it's difficult (or impossible) to reason about them in a practical sense. Miscalibrated predictions can also be misleading, because we often naturally interpret probabilities as long-run frequencies. For instance "If I flip this coin 100 times, it'll come up heads about half of the time." You might think about working with poorly calibrated predictions being similar to flipping a biased coin when you're unaware of its biases.
-
-In the next post, I'll talk about class imbalances and why balancing your classes can be a particularly bad idea.
