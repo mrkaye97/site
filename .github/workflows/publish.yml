@@ -1,8 +1,8 @@
 name: Publish site
 
-# Builds the site and uploads it as site.tar.gz (plus its checksum,
-# site.sha256) to the `latest` release. The Pi polls the checksum and swaps in
-# new builds (see crons/scripts/pull_deploy.sh in the pi repo).
+# Builds the site and publishes it as a `build-<sha>` release holding
+# site.tar.gz and its checksum, site.sha256. The Pi deploys whichever release
+# is marked Latest (see crons/scripts/pull_deploy.sh in the pi repo).
 
 on:
   push:
@@ -51,14 +51,25 @@ jobs:
           tar -czf site.tar.gz -C dist .
           sha256sum site.tar.gz > site.sha256
 
-      - name: Upload to the latest release
+      # One release per build. The Pi deploys whichever release is marked
+      # Latest, so marking an older one Latest in the GitHub UI rolls back.
+      - name: Release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view latest >/dev/null 2>&1 ||
-            gh release create latest --target main --title "Latest build" \
-              --notes "Built by the Publish site workflow. The Pi deploys whatever is here."
-          # The Pi watches site.sha256, so upload it last: by the time it
-          # changes, the matching tarball is already there.
-          gh release upload latest site.tar.gz --clobber
-          gh release upload latest site.sha256 --clobber
+          tag="build-${GITHUB_SHA::7}"
+          # A re-run of the same commit replaces its release.
+          gh release delete "$tag" --cleanup-tag --yes 2>/dev/null || true
+          # gh uploads the files to a draft and publishes it after, so the
+          # release only becomes Latest once both files are there.
+          gh release create "$tag" site.tar.gz site.sha256 \
+            --target "$GITHUB_SHA" --latest --title "$tag" \
+            --notes "Built from $GITHUB_SHA: $(git log -1 --format=%s)"
+
+      - name: Prune old releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release list --limit 100 --json tagName,createdAt \
+            --jq '[.[] | select(.tagName | startswith("build-"))] | sort_by(.createdAt) | reverse | .[10:] | .[].tagName' |
+            xargs -r -n1 gh release delete --cleanup-tag --yes
