@@ -13,7 +13,7 @@ There's tons of election content so I won't write too much on it, but I thought 
 - _**One**_ hour: Roughly how long after polls started closing for the betting markets to show a lead for Democrats that seemed decisive enough to make people following the election think "this is over."
 - _**Eight**_: The number of seats the Democrats are going to flip in the Senate. (Edit: As of 8\:00AM Eastern on Wednesday, it might actually be nine.)
 - _**Eighteen**_ points: Jon Ossoff's lead in Georgia, an R+2 state in 2024, with 95% of votes reported.
-- _**Six**_: The number of consecutive elections won by Gina Hinojosa in Texas.
+- _**Six**_: The number of consecutive general elections won by Gina Hinojosa in Texas.
 - _**Twenty-five**_ points: The difference between the percentage chance of winning for the Democrats according to the New York Times's "Needle" and the percentage chance given by Kalshi at 8PM Eastern.
 - _**Twenty-three**_ points: The swing from Trump's 2024 margin of victory in Kansas to Adam Hamilton's lead with 95% reporting.
 - _**Fifty-six**_ points: Alexandria Ocasio-Cortez's lead in her district (NY 14) with 95% reporting.
