@@ -40,3 +40,7 @@ And a couple of questions I have coming out of this:
 3. How much did candidate quality matter today? For instance, would Cornyn have beaten Talarico in Texas? Or would a non-Collins candidate in Maine have lost by significantly more?
 
 And now, time for bed.
+
+<style>
+  .prose em > strong { color: var(--accent); }
+</style>
