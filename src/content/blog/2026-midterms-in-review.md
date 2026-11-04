@@ -11,7 +11,7 @@ Yesterday, I wrote [a post](/blog/2026-midterms) saying that I thought there wou
 There's tons of election content so I won't write too much on it, but I thought I'd write down a few bullets from some numbers that I thought were the craziest of the night:
 
 - _**One**_ hour: Roughly how long after polls started closing for the betting markets to show a lead for Democrats that seemed decisive enough to make people following the election think "this is over."
-- _**Eight**_: The number of seats the Democrats are going to flip in the Senate. (Edit: As of 8:00AM Eastern on Wednesday, it might actually be nine.)
+- _**Eight**_: The number of seats the Democrats are going to flip in the Senate. (Edit: As of 8\:00AM Eastern on Wednesday, it might actually be nine.)
 - _**Eighteen**_ points: Jon Ossoff's lead in Georgia, an R+2 state in 2024, with 95% of votes reported.
 - _**Six**_: The number of consecutive elections won by Gina Hinojosa in Texas.
 - _**Twenty-five**_ points: The difference between the percentage chance of winning for the Democrats according to the New York Times's "Needle" and the percentage chance given by Kalshi at 8PM Eastern.
