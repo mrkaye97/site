@@ -83,6 +83,18 @@ const nav = [
       title="sn-p.sh"
       href="/rss.xml"
     />
+    {
+      // Page views, counted by the self-hosted GoatCounter on the Pi. Both
+      // URLs are on this site; Caddy proxies them to GoatCounter.
+      import.meta.env.PROD && (
+        <script
+          is:inline
+          async
+          data-goatcounter="https://sn-p.sh/count"
+          src="/count.js"
+        ></script>
+      )
+    }
   </head>
   <body>
     <a class="skip" href="#content">Skip to content</a>
