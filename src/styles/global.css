@@ -82,12 +82,18 @@ h3 {
   letter-spacing: -0.011em;
 }
 
+/* Inline code: the same token and hairline as code blocks, so a chip reads as
+   a small piece of one. Cloned decoration keeps the edge and padding on each
+   line when a long identifier wraps. */
 code {
   font-family: var(--mono);
-  font-size: 0.9em;
+  font-size: 0.85em;
   background: var(--code-bg);
-  padding: 0.1em 0.3em;
+  border: 1px solid var(--rule);
+  padding: 0.05em 0.35em;
   border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
 pre {
@@ -102,6 +108,7 @@ pre {
 
 pre code {
   background: none;
+  border: 0;
   padding: 0;
   font-size: inherit;
 }
