@@ -6,21 +6,21 @@ tags: ["engineering"]
 original: "https://hatchet.run/blog/supertoast-wasnt-enough"
 ---
 
-Earlier this year, we wrote a post we called [Supertoast Tables](/blog/supertoast-tables) about a job we wrote to offload data to S3 to save us money on disk. Our Postgres disk costs were getting out of control, so offloading the data to S3 after a day instead of keeping it on disk indefinitely could help shed terabytes of data. A few months after we wrote it, it became clear it wasn't enough.
+Everything is S3 now. [Postgres](https://neon.com/blog/get-page-at-lsn), [Git](https://cursor.com/blog/git-at-any-scale), [Kafka](https://www.warpstream.com/blog/kafka-is-dead-long-live-kafka), and even [POSIX filesystems](https://docs.archil.com/details/architecture) are being reinvented with S3 as a foundational layer. Earlier this year, we hopped on the bandwagon and decided to offload a large part of the Hatchet payload data to S3 to save us money on disk, which we wrote about in a blog we called [Supertoast Tables](/blog/supertoast-tables). Our Postgres disk costs were getting out of control, so offloading the data to S3 after a day instead of keeping it on disk indefinitely could help shed terabytes of data.
 
-Now, we have a new version of the same job that offloads the same hundreds of gigabytes of data to S3 every day, but gives us something like a 97% reduction in disk usage. And in the process, we also learned a few fun, lesser-known tricks in Postgres that were great for solving exactly this type of problem.
+But a few months after we wrote this, we realized we could do even better. We now have a new version of the same job that offloads the same hundreds of gigabytes of data to S3 every day, but gives us something like a 97% reduction in disk usage. And in the process, we also learned a few fun, lesser-known tricks in Postgres that were great for solving exactly this type of problem.
 
 ## A Recap
 
-Let's rewind. The original idea was to rewrite a single partition of our supertoast table roughly in-place. We'd process blocks of rows, offload them to S3, and then write a pointer to the key in S3 into a new partition. Once we'd offloaded every row to S3, we'd acquire a lock on the parent, detach the old partition with the inline content, and attach the new one with the pointers. Great!
+Let's rewind. The original idea used a nightly job to rewrite a partition of our payloads table (we [heavily use time-based partitioning](https://hatchet.run/blog/postgres-partitioning) in Postgres). We'd process blocks of rows, offload them to S3, and then write a pointer to the key in S3 into a new partition. Once we'd offloaded every row to S3, we'd acquire a lock on the parent, detach the old partition with the inline content, and attach the new one with the pointers. This went incredibly well; we scaled down a bunch of our NVMes, rewarding ourselves with a glass of champagne.
 
-Then we hit a new problem: Even with the new partitions only containing a pointer, the partitions were taking up hundreds of gigabytes each. Half of this was from the actual data: The keys, and other metadata we stored. The other half was from the primary key.
+But the champagne soon ran dry. A few months in, we hit a new problem: we wanted to save even more room on disk. But even with the new partitions only containing a pointer, many of the offloaded partitions were taking up hundreds of gigabytes each. Half of this was from the actual data: The keys, and other metadata we stored. The other half was from the primary key.
 
-So we were faced with a new challenge: How can we continue offloading data to S3, but be able to look up the correct payload in S3 _without needing something like this key-value "supertoast" table with pointers to the objects_? And with that, our lookup-scan-lookup method was born.
+So we were faced with a new challenge: How can we continue offloading data to S3, but be able to look up the correct payload in S3 _without needing to store this key-value "supertoast" table with pointers to the objects_? And with that, our lookup-scan-lookup method was born.
 
 ## An Aside on Polymorphism in Postgres
 
-There's one critical detail that makes all of this work: a supertoast row has the same id as the "source" row that owns its payload.
+Before we go further, a side note on one critical detail that makes all of this work: a supertoast row has the same id as the "source" row that owns its payload.
 
 You might think of this as a type of polymorphism, but in the database. Many different source tables (tasks, events, etc.) each write their payloads into the same supertoast table, and we look up the relevant payload by using the id of e.g. the task that we're retrieving. Our friend [Laurenz Albe at Cybertec](https://www.cybertec-postgresql.com/en/author/laurenz_albe/) wrote a great [blog post](https://www.cybertec-postgresql.com/en/conditional-foreign-keys-polymorphism-in-sql/) on a few options for implementing polymorphism in Postgres, if you're curious.
 
@@ -53,9 +53,11 @@ I feel obligated to say that I would _very strongly not recommend using this pat
 
 ## Magic Lookups
 
-We started brainstorming ways for us to limit how much data we needed to write to disk while still being able to look up payloads correctly. Our first thought was to try using a hash index instead of a btree for the primary key of the key-value table to limit how much disk the index was taking up, but it was immediately clear that this wouldn't be enough. We needed an orders of magnitude improvement, and this wouldn't give us anything close to that.
+We started brainstorming ways for us to limit how much data we needed to write to disk while still being able to look up payloads correctly. Our first thought was to try using a hash index instead of a btree for the primary key of the key-value table to limit how much disk the index was taking up, but it was immediately clear that this wouldn't be enough. We needed an order-of-magnitude improvement, and this wouldn't give us anything close to that.
 
-Next, we started toying with the idea of a "magic" lookup, which was basically some way to map from the supertoast row's UUID to a key in S3, _without needing to write that key to the database_. One way to do this, we realized, would be to write _multiple_ files to S3 during the offload process: First, an "index" which contains a mapping from a UUID to its actual key, and second, the object itself (at that key).
+Next, we started toying with the idea of a "magic" lookup, which was basically some way to map from the supertoast row's UUID to a key in S3, _without needing to write that key to the database_. The simplest magic lookup would be storing each payload as its own key in S3, but as we discussed in the last article, the volume of PUT requests becomes prohibitively expensive at scale. The S3 objects need to contain batches of many payloads, not just a single payload.
+
+Which brought us to the next idea: during the offload process, we'd write an index file which contains a mapping from a UUID to its actual key, and second, the object itself (at that key).
 
 ## The Index File
 
