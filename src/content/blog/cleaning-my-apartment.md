@@ -12,7 +12,7 @@ She did a way better job than I certainly ever have (or would), and was amazingl
 
 Turns out, a lot.
 
-For better or for worse, I like making progress and getting better at things, and struggle to just do things I like without feeling that urge. So I went down a bit of a rabbit hole to try to figure out how she could be so thorough, and also so fast. Since then, I've saved myself a ton of money because I don't need a housekeeper anymore, and I've found myself actually finding joy in turning on a podcast like [Still Counting](https://crooked.com/podcast-series/still-counting/) and getting to work for what now takes me about two hours a month.
+For better or for worse, I like making progress and getting better at things, and struggle to just do things I like without feeling that urge. So I went down a bit of a rabbit hole to try to figure out how she could be so thorough, and also so fast. Since then, I've saved myself a ton of money because I don't need a housekeeper anymore, and I've found myself actually finding joy in turning on a podcast like [Still Counting](https://crooked.com/podcast-series/still-counting/) and getting to work for what now takes me about an hour and a half.
 
 ## The Tools
 
@@ -89,5 +89,11 @@ Now we're basically done! At this point, I'll just do a few more final things:
 
 And that's it! This whole process takes me about an hour and a half to complete end-to-end, maybe a bit more if I'm doing some of the deeper clean steps or anything else extra or specific that comes up, like dusting the baseboards.
 
+## Who Cares?
 
+So if you got this far, you probably aren't asking "who cares?" but I'll answer anyway. The reason is that cleaning used to be something I dreaded. It'd take me four or five hours and be _exhausting_. I'd take breaks between different rooms or steps, and generally just find myself feeling miserable about it. And hiring someone to do it for me was _expensive_. Most of these tools and products cost under $20, aside from some rarer purchases like the mop. I bought everything I've needed to clean my apartment this year for less than one professional cleaning.
+
+I've also started to take some pride in it. Not that I'm "good" at cleaning by any stretch, but I feel a lot less like an amateur moving from room to room like a chicken with my head cut off, and if you're also finding yourself dreading cleaning or feeling like you're bad at it and doing something wrong, you absolutely can improve too.
+
+It's been really satisfying to sit down on the couch after cleaning for an hour or two in a clean and tidy apartment after finishing up and throwing everything in the wash. In fact, I'm writing this blog post just after doing that. I'm going to go put my cloths in the dryer now, they just finished in the wash.
 
