@@ -49,7 +49,7 @@ Pick up any clothes, shoes, or yoga mats that might be strewn across your floor 
 7. After about 10 minutes, use a toilet scrubber to clean out the toilet, and then flush the toilet bowl cleaner.
 
 :::deep-clean
-For a deep clean, I'll also clean the shower with a shower-specific cleaner and scrub off any soap scum buildup with a sponge, and will also more thoroughly scrub out the sink with a sponge to remove buildup there too.
+I'll also clean the shower with a shower-specific cleaner and scrub off any soap scum buildup with a sponge, and will also more thoroughly scrub out the sink with a sponge to remove buildup there too.
 :::
 
 ### Dust
@@ -66,7 +66,7 @@ Grab a couple of clean microfiber cloths.
 4. Return everything we removed.
 
 :::deep-clean
-For a deep clean, I'll use a bleach-based cleaner to disinfect countertops and the sink. I'll also clean the microwave, inside the fridge, inside the cabinets, and so on. But I've found I don't need to do that as often.
+I'll use a bleach-based cleaner to disinfect countertops and the sink. I'll also clean the microwave, inside the fridge, inside the cabinets, and so on. But I've found I don't need to do that as often.
 :::
 
 ### Clean the Floors
