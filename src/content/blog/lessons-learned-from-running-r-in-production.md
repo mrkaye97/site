@@ -3,7 +3,7 @@ title: "Lessons Learned from Running R in Production"
 description: "And why I probably won't be doing it again"
 date: "2023-06-29"
 tags: ["R", "data science"]
-hidden: true
+hidden: false
 ---
 A couple weeks ago, I wrote a high-level post on REST APIs. One thing that I noted was that I couldn't, in good faith, recommend running R (or Plumber, a common library used to create APIs in R) in any type of moderately high-load production system.
 

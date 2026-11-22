@@ -3,7 +3,7 @@ title: "Balancing Classes in Classification Problems"
 description: "And why it's generally a bad idea"
 date: "2023-04-01"
 tags: ["R", "data science"]
-hidden: true
+hidden: false
 ---
 In [my last post](/blog/calibration) I wrote about common classification metrics and, especially, calibration.
 

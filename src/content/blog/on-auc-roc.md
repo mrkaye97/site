@@ -3,7 +3,7 @@ title: "Interpreting AUC-ROC"
 description: "Building intuitions about a commonly misinterpreted metric"
 date: "2023-03-09"
 tags: ["data science", "R"]
-hidden: true
+hidden: false
 ---
 **AUC** goes by many names: AUC, AUC-ROC, ROC-AUC, the area under the curve, and so on. It's an extremely important metric for evaluating machine learning models and it's an uber-popular data science interview question. It's also, at least in my experience, the single most commonly misunderstood metric in data science.
 
