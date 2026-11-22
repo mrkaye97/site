@@ -5,6 +5,7 @@ const KINDS = {
   note: "Note",
   warning: "Warning",
   aside: "Aside",
+  "deep-clean": "🧽 Deep clean",
 };
 
 /**
