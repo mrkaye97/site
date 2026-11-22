@@ -1,0 +1,30 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Not found — sn-p.sh" description="This page doesn't exist.">
+  <p class="statement">These aren't the bytes you're looking for.</p>
+
+  <div class="body">
+    <p><a href="/">Home</a>, go. And find your page, you will.</p>
+  </div>
+</Base>
+
+<style>
+  .statement {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    line-height: 1.3;
+    max-width: 22ch;
+    margin: 0 0 3rem;
+    text-wrap: balance;
+  }
+
+  .body {
+    max-width: 56ch;
+  }
+
+  .body p {
+    margin: 0;
+    color: var(--ink-soft);
+  }
+</style>
