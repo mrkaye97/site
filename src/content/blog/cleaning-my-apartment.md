@@ -6,13 +6,13 @@ tags: ["misc", "life"]
 hidden: false
 ---
 
-I hired a housekeeper about a year and a half ago. I was feeling stressed about how much time it was taking me to clean, and it felt like cleaning was taking up huge chunks of my weekend, even for the basics. I'm not talking about a deep clean or anything in particular, just the basics: Cleaning the bathroom, dusting, cleaning the floors, and cleaning the kitchen.
+I hired a housekeeper about a year and a half ago. I was feeling stressed about how much time it was taking me to clean, and it felt like cleaning was taking up huge chunks of my weekend, even for the basics. I'm not talking about a deep clean or anything in particular, just the basics: cleaning the bathroom, dusting, cleaning the floors, and cleaning the kitchen.
 
 She did a way better job than I certainly ever have (or would), and was amazingly efficient. So I found myself wondering: What was I doing wrong?
 
 Turns out, a lot.
 
-For better or for worse, I like making progress and getting better at things, and struggle to just do things I like without feeling that urge. So I went down a bit of a rabbit hole to try to figure out how she could be so thorough, and also so fast. Since then, I've saved myself a ton of money because I don't need a housekeeper anymore, and I've found myself actually finding joy in turning on a podcast like [Still Counting](https://crooked.com/podcast-series/still-counting/) and getting to work for what now takes me about an hour and a half.
+For better or for worse, I like making progress and getting better at things, and struggle to just do things I like without feeling that urge. So I went down a bit of a rabbit hole to try to figure out how she could be so thorough, and also so fast. Since then, I've saved myself a ton of money because I don't need a housekeeper anymore, and I've surprisingly been finding joy in turning on a podcast like [Still Counting](https://crooked.com/podcast-series/still-counting/) and getting to work for what now takes me about an hour and a half.
 
 ## The Tools
 
@@ -20,15 +20,15 @@ It should've been obvious, but the tools I was using were totally wrong, and get
 
 ### Microfiber Cloths
 
-I used to use paper towels for everything. Don't do that. They're a super inefficient way to clean, use up tons of paper, obviously aren't reusable, and also are basically only good at wiping wet surfaces dry. Buy microfiber cloths instead. I got a pack from [E-Cloth](https://us.e-cloth.com/) which I've been using for about a year now, and really like them. You can use them for dusting, wiping down surfaces you just sprayed with a cleaning product, buffing and polishing, etc.
+I used to use paper towels for everything. Don't do that. They're a super inefficient way to clean, use up tons of paper, obviously aren't reusable, and also are basically only good at wiping wet surfaces dry. Buy microfiber cloths instead. I got a pack from [E-Cloth](https://us.e-cloth.com/), which I've been using for about a year now, and really like them. You can use them for dusting, wiping down surfaces you just sprayed with a cleaning product, buffing and polishing, etc.
 
 ### All-Purpose Cleaner
 
-Speaking of cleaning products, I used to be nervous to use cleaning products with chemicals in the kitchen because I was worried about poisoning myself, so I'd spray down my counters and then rinse them off a few times with a separate spray bottle before finally calling it done. This was a _huge_ waste of time. Now, I just spray down surfaces with a non-toxic, bleach-free all-purpose cleaner like [this one from Clorox](https://www.clorox.com/products/clorox-disinfecting-all-purpose-cleaner/), let the cleaner sit for about a minute, and then wipe it down. That's it. I do this on bathroom counters, kitchen counters, my desk and tables, and basically any other surface with grime built up on it. It takes two minutes. _Note that you probably want to disinfect periodically, in which case you can use a bleach-based cleaner (or just bleach) and let it sit a bit longer, like ten minutes._
+Speaking of cleaning products, I used to be nervous about using cleaning products with chemicals in the kitchen because I was worried about poisoning myself, so I'd spray down my counters and then rinse them off a few times with a separate spray bottle before finally calling it done. This was a _huge_ waste of time. Now, I just spray down surfaces with a non-toxic, bleach-free all-purpose cleaner like [this one from Clorox](https://www.clorox.com/products/clorox-disinfecting-all-purpose-cleaner/), let the cleaner sit for about a minute, and then wipe it down. That's it. I do this on bathroom counters, kitchen counters, my desk and tables, and basically any other surface with grime built up on it. It takes two minutes. _Note that you probably want to disinfect periodically, in which case you can use a bleach-based cleaner (or just bleach) and let it sit a bit longer, like ten minutes._
 
 ### Microfiber Mop
 
-I used to first vacuum pretty quickly and then use a Swiffer to do a once-over on my floors. I'd notice that the dry swiffers would pick up a ton of dust and hair, and wet swiffers would also end up being super dirty and gray. And also, once again, Swiffers are super wasteful. I'd Swiff one room, pick up a bunch of dust, and then just throw the pad out and move along. Rinse and repeat every week or two, and I'd be burning through tons of Swiffer sweepers, dusters, and wet Swiffer pads. Now, I use a [microfiber mop](https://www.microfiberwholesale.com/products/professional-microfiber-mop-system-1?variant=39422172233763&igTg=9c995629-2bdb-4705-b293-ac4bcd4bc101). After vacuuming, I'll go over my floors with the dust mop pad, and then mop the floors with [Bona floor cleaner](https://www.bona.com/en-us/products/homeowners/cleaners/wood-floor/hw-clnr-spray-32oz), and that's it. My floors look so much better now than they did, and then I just throw the mop pads in the wash.
+I used to first vacuum pretty quickly and then use a Swiffer to do a once-over on my floors. I'd notice that the dry Swiffers would pick up a ton of dust and hair, and wet Swiffers would also end up being super dirty and gray. And also, once again, Swiffers are super wasteful. I'd Swiff one room, pick up a bunch of dust, and then just throw the pad out and move along. Rinse and repeat every week or two, and I'd be burning through tons of Swiffer sweepers, dusters, and wet Swiffer pads. Now, I use a [microfiber mop](https://www.microfiberwholesale.com/products/professional-microfiber-mop-system-1?variant=39422172233763&igTg=9c995629-2bdb-4705-b293-ac4bcd4bc101). After vacuuming, I'll go over my floors with the dust mop pad, and then mop the floors with [Bona floor cleaner](https://www.bona.com/en-us/products/homeowners/cleaners/wood-floor/hw-clnr-spray-32oz), and that's it. My floors look so much better now than they did, and then I just throw the mop pads in the wash.
 
 ## Process
 
@@ -44,7 +44,7 @@ Pick up any clothes, shoes, or yoga mats that might be strewn across your floor 
 2. Spray down all of the countertops, the sink, the mirror, and the toilet with all-purpose cleaner.
 3. While it sits, put some toilet bowl cleaner in the toilet bowl.
 4. Wipe down all the surfaces with microfiber cloths. I use different cloths for the countertops than I do for the toilet, and you probably should too.
-5. Return everything to the countertops that we moved.
+5. Return everything that we put on the floor to the countertops.
 6. Toss the microfiber cloths you just used in the washing machine.
 7. After about 10 minutes, use a toilet scrubber to clean out the toilet, and then flush the toilet bowl cleaner.
 
@@ -79,7 +79,7 @@ Do the floors last, since dusting and cleaning surfaces knocks stuff down onto t
 
 ### Finish Up
 
-Now we're basically done! At this point, I'll just do a few more final things:
+Now we're basically done! At this point, I'll just do a few final things:
 
 1. Empty out the vacuum as necessary.
 2. Put any remaining towels or cloths in the washing machine.
@@ -93,7 +93,7 @@ And that's it! This whole process takes me about an hour and a half to complete 
 
 So if you got this far, you probably aren't asking "who cares?" but I'll answer anyway. The reason is that cleaning used to be something I dreaded. It'd take me four or five hours and be _exhausting_. I'd take breaks between different rooms or steps, and generally just find myself feeling miserable about it. And hiring someone to do it for me was _expensive_. Most of these tools and products cost under $20, aside from some rarer purchases like the mop. I bought everything I've needed to clean my apartment this year for less than one professional cleaning.
 
-I've also started to take some pride in it. Not that I'm "good" at cleaning by any stretch, but I feel a lot less like an amateur moving from room to room like a chicken with my head cut off, and if you're also finding yourself dreading cleaning or feeling like you're bad at it and doing something wrong, you absolutely can improve too.
+I've also started to take some pride in it. Not that I'm "good" at cleaning by any stretch, but I feel a lot less like an amateur moving from room to room like a chicken with its head cut off, and if you're also finding yourself dreading cleaning or feeling like you're bad at it and doing something wrong, you absolutely can improve too.
 
-It's been really satisfying to sit down on the couch after cleaning for an hour or two in a clean and tidy apartment after finishing up and throwing everything in the wash. In fact, I'm writing this blog post just after doing that. I'm going to go put my cloths in the dryer now, they just finished in the wash.
+It's been really satisfying to sit down on the couch after cleaning for an hour or two in a clean and tidy apartment after finishing up and throwing everything in the wash. In fact, I'm writing this blog post just after doing that. I'm going to go put my cloths in the dryer now. They just finished in the wash.
 
