@@ -22,7 +22,7 @@ const years = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
     years.map(([year, entries]) => (
       <section class="year">
         <h2>{year}</h2>
-        <ul>
+        <ul class="entry-list">
           {entries.map((post) => (
             <li class:list={{ "is-hidden": post.data.hidden }}>
               <a href={`/blog/${post.id}`}>{post.data.title}</a>
@@ -44,20 +44,6 @@ const years = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
 </Base>
 
 <style>
-  h1 {
-    font-size: clamp(1.875rem, 5vw, 2.5rem);
-    margin: 0 0 1.25rem;
-  }
-
-  .intro {
-    font-size: 1.125rem;
-    line-height: 1.55;
-    max-width: 46ch;
-    color: var(--ink-soft);
-    margin: 0 0 3.5rem;
-    text-wrap: pretty;
-  }
-
   /* A column for the year rather than a negative offset, so the marker stays
      inside the container instead of hanging off its edge. */
   .year {
@@ -82,35 +68,6 @@ const years = [...byYear.entries()].sort((a, b) => b[0] - a[0]);
       grid-template-columns: 1fr;
       gap: 1rem;
     }
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 1.75rem;
-  }
-
-  li a {
-    font-size: 1.3125rem;
-    font-weight: 600;
-    color: var(--ink);
-    text-decoration: none;
-    line-height: 1.25;
-    display: inline-block;
-    text-wrap: balance;
-  }
-
-  li a:hover {
-    color: var(--accent);
-  }
-
-  li p {
-    margin: 0.3rem 0 0;
-    font-style: italic;
-    color: var(--ink-soft);
-    text-wrap: pretty;
   }
 
   /* Dev-only: hidden posts are included locally but excluded from prod builds. */
